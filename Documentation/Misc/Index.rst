@@ -13,11 +13,11 @@ Users manual
 
 .. only:: html
 
-	This chapter describes how to use the extension from a user point of view.
+	Misc
 
 .. toctree::
 	:maxdepth: 5
 	:titlesonly:
 
-	Records/Index
-	Plugins/Index
+	MissingKnownErrors/Index
+	Faq/Index

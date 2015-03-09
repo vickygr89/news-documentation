@@ -13,11 +13,11 @@ Users manual
 
 .. only:: html
 
-	This chapter describes how to use the extension from a user point of view.
+	This chapter lists some nice tutorials.
 
 .. toctree::
 	:maxdepth: 5
 	:titlesonly:
 
-	Records/Index
-	Plugins/Index
+	Integration/Index
+	Templates/Index

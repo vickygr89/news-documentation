@@ -24,7 +24,7 @@ News system
 		en
 
 	:Description:
-		EXT:news
+		EXT:news **Important:** This version is in progress and absolut incomplete!
 
 	:Keywords:
 		news
@@ -59,3 +59,6 @@ News system
 	Introduction/Index
 	UsersManual/Index
 	AdministratorManual/Index
+	DeveloperManual/Index
+	Tutorials/Index
+	Misc/Index
