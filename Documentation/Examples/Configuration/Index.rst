@@ -29,7 +29,7 @@ details, how to debug it and so on.
 
 .. tip::
 
-   Take a break from time to time.
+   Take a break from time to time!
 
 Admonitions should be used to warn the users about potential
 pitfalls, attract their attention to important elements
