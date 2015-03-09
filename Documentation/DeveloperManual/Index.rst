@@ -6,7 +6,7 @@
 .. include:: ../Includes.txt
 
 
-.. _users-manual:
+.. _developer-manual:
 
 Developer manual
 ================
