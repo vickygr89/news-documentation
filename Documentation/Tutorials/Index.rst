@@ -8,8 +8,8 @@
 
 .. _users-manual:
 
-Users manual
-============
+Tutorials
+=========
 
 .. only:: html
 
