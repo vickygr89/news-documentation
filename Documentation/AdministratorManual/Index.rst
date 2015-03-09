@@ -19,8 +19,6 @@ Administrator manual
 	:maxdepth: 5
 	:titlesonly:
 
+	Configuration/Index
 	Installation/Index
-	RenderingPdf/Index
-	WindowsSetup/Index
-	KnownProblems/Index
-	ChangeLog/Index
+	Templates/Index
