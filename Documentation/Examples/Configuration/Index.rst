@@ -169,7 +169,7 @@ Headline 5
 """"""""""
 
 Headline 6
-~~~~~~~~~~+++
+~~~~~~~~~~
 
 Alternatively a grid table can be used. As tip, Emacs editor provides some facilities_ to edit grid table. A recommended tutorial can be found at http://www.emacswiki.org/emacs/TableMode. ::
 

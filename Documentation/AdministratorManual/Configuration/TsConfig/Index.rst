@@ -13,52 +13,133 @@ This section covers all configurations which can be set with TsConfig.
 Every configuration starts with ``tx_news.``.
 
 
+.. note::
+ Just for clarification: TsConfig is in TYPO3 only used for configurations inside the backend!
+
+General configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+The general configuration covers options available during the creation and editing of news records.
 
 Properties
-^^^^^^^^^^
+""""""""""
 
 .. container:: ts-properties
 
 	=========================== =====================================
 	Property                    Data type
 	=========================== =====================================
-	singlePid_        :ref:`t3tsref:data-type-boolean`
-	templateLayouts_             :ref:`t3tsref:data-type-wrap`
-	archive_             :ref:`t3tsref:data-type-wrap`
+	singlePid_                  integer
+	templateLayouts_            array
+	archive_                    string
 	=========================== =====================================
+
+singlePid
+~~~~~~~~~
+
+It is possible to preview a news record if pressing the button “Save &
+Preview”. Therefore the ID of the page with the single view needs to
+be defined. ::
+
+	# Example:
+	tx_news.singlePid = 123
+
+A plugin with the view “Detail view” must be available on that page.
+If a preview of hidden records needs to be allowed too, the checkbox
+“*Allow hidden records*” needs to be checked in the plugin.
+
+templateLayouts
+~~~~~~~~~~~~~~~
+
+The selectbox “Template Layout” inside a plugin can be easily be extended by using TsConfig.::
+
+	# Example:
+	tx_news.templateLayouts {
+			123 = Fobar
+			456 = Blub
+	}
+
+will show 2 layout options with 123/456 as keys and Fobar/Blub as values.
+
+Inside the template it is then possible to define conditions with fluid by checking {settings.templateLayout}
+
+archive
+~~~~~~~
+
+Use strtotime (see `http://www.php.net/strtotime <http://www.php.net/strtotime>`_ ) to predefine the archive date.::
+
+	# Example:
+	tx_news.predefine.archive = next friday
+
+will set the archive date on the the next friday.
+
+Administration module
+^^^^^^^^^^^^^^^^^^^^^
+
+Properties
+""""""""""
+.. container:: ts-properties
 
 	=========================== =====================================
 	Property                    Data type
 	=========================== =====================================
-	preselect_                    :ref:`t3tsref:data-type-array`
-	defaultPid_                    :ref:`t3tsref:data-type-array`
-	redirectToPageOnStart_                    :ref:`t3tsref:data-type-array`
-	allowedPage_                    :ref:`t3tsref:data-type-array`
+	preselect_                   array
+	defaultPid_                  integer
+	redirectToPageOnStart_       integer
+	allowedPage_                 integer
 	=========================== =====================================
 
+preselect
+~~~~~~~~~
 
+Predefine the form in the administration module. The possible fields for the preselection are:
 
+- recursive
+- timeRestriction
+- topNewsRestriction
+- limit
+- offset
+- sortingField
+- sortingDirection
+- categoryConjunction
 
-TODO Clear caches if a news record changes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+::
 
-If a news record is created or edited, chances are high that the changes are not visible in the frontend as the output is still cached.
-Therefore you need to clear the caches of the list and single view pages. This can be done automatically by using this command in the PageTsConfig: ::
+	# Example:
+	tx_news.module {
+		preselect {
+			topNewsRestriction = 1
+		}
+	}
 
-	TCEMAIN.clearCacheCmd = 123,456,789
+defaultPid
+~~~~~~~~~~
 
+If no page is selected in the page tree, any record created in the administration module would be saved on the root page.
+If this is not desired, the pid can be defined by using defaultPid.<tablename>::
 
-The code needs to be added to the sys folder where the news records are edited. Change the example page ids to the ones which should be cleared, e.g. the one of list views and detail view.
-You can use: ::
+	# Example
+	tx_news.module.defaultPid.tx_news_domain_model_news = 123
 
-	TCEMAIN.clearCacheCmd = pages
+News records will be saved on page with ID 123.
 
-to clear the complete caches as well
+redirectToPageOnStart
+~~~~~~~~~~~~~~~~~~~~~
 
-	TCEMAIN.clearCacheCmd = cacheTag:tx_news
+If no page is selected, the user will be redirected to the given page. ::
 
-to clear all caches of pages on which the news plugins are used
+	# Example:
+	tx_news.module.redirectToPageOnStart = 456
 
-.. tip::
+The user will be redirected to the page with the uid 456.
 
-	The mentioned TCEMAIN settings are part of the TYPO3 core and can be used therefore not only for the news extension.
+allowedPage
+~~~~~~~~~~~
+
+If defined, the administration module will redirect the user always to the given page, no matter what defined in the page tree. ::
+
+	# Example:
+	tx_news.module.allowedPage = 123
+
+The user will be redirected to the page with the uid 123.
+

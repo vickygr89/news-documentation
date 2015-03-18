@@ -22,3 +22,4 @@ Administrator manual
 	Configuration/Index
 	Installation/Index
 	Templates/Index
+	BestPractice/Index
