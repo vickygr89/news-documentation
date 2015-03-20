@@ -136,6 +136,16 @@ contentElementRelation
 
 If set, you can add content elements as relation to a news record. This makes it easy to enrich the news article with further images, plugins, ...
 
+If you want to reduce the available options of the content elements, you can use TsConfig in the sysfolder of the news records: ::
+	
+	# Hide content element types
+	TCEFORM.tt_content.CType.removeItems = header,bullets,table,uploads,menu,list,html,login,mailform,search,shortcut,div
+	# Hide fields
+	TCEFORM.tt_content.header.disabled = 1
+	TCEFORM.tt_content.header_layout.disabled = 1
+
+More information can be found at http://docs.typo3.org/typo3cms/TSconfigReference/PageTsconfig/TCEform/Index.html.	
+
 manualSorting
 """""""""""""
 
