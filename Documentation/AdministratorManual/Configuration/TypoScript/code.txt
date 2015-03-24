@@ -1,9 +1,0 @@
-
-includeSubCategories = 0
-
-dateField = datetime
-cropMaxCharacters = 150
-topNewsFirst = 0
-
-orderBy = datetime
-orderDirection = desc

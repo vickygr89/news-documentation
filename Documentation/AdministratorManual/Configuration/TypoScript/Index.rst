@@ -5,9 +5,293 @@
 
 .. include:: ../../../Includes.txt
 
+Plugin settings
+---------------
 
-TypoScript
-----------
+Properties
+^^^^^^^^^^
+
+.. container:: ts-properties
+
+	==================================== =============== ===============
+	Property                             Sheet            Type
+	==================================== =============== ===============
+	orderBy_                              General         string
+	orderDirection_                       General         string
+	dateField_                            General         string
+	categories_                           General         string
+	categoryConjunction_                  General         string
+	includeSubCategories_                 General         boolean
+	archiveRestriction_                   General         int
+	timeRestriction_                      General         string
+	timeRestrictionHigh_                  General         string
+	topNewsRestriction_                   General         string
+	singleNews_                           General         string
+	previewHiddenRecords_                 General         string
+	startingpoint_                        General         string
+	recursive_                            General         int
+	detailPid_                            additional      int
+	listPid_                              additional      int
+	backPid_                              additional      int
+	limit_                                additional      int
+	offset_                               additional      int
+	tags_                                 additional      string
+	hidePagination_                       additional      boolean
+	`list.paginate.itemsPerPage`_         additional      int
+	topNewsFirst_                         additional      boolean
+	excludeAlreadyDisplayedNews_          additional      boolean
+	disableOverrideDemand_                additional      boolean
+	`media.maxWidth`_                     template        int
+	`media.maxHeight`_                    template        int
+	cropMaxCharacters_                    template        int
+	templateLayout_                       template        string
+	==================================== =============== ===============
+
+orderBy
+"""""""
+.. container:: table-row
+
+   Property
+         orderBy
+   Data type
+         string
+   Description
+         Define the sorting of displayed news records.
+         The chapter “Extend news > Extend flexforms” shows how the select box can be extended. TODO add link
+
+orderDirection
+""""""""""""""
+.. container:: table-row
+
+   Property
+         orderDirection
+   Data type
+         string
+   Description
+         Define the sorting direction which can either be "asc" for ascending or "desc" descending. This can be either *asc* or *desc*.
+
+dateField
+"""""""""
+.. container:: table-row
+
+   Property
+         dateField
+   Data type
+         string
+   Description
+         The date menu builds a menu by year and month and the given news records. The menu can either be built by using the date field or the archive field.
+
+categories
+""""""""""
+.. container:: table-row
+
+   Property
+         categories
+   Data type
+         string
+   Description
+         Define the news categories which are taken into account when getting the correct news records.
+
+         :typoscript:`plugin.tx_news.settings.categories =` 1,2,3
+
+         .. caution::
+         	Don't forget to set the category mode too! See property below.
+
+
+categoryConjunction
+"""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         categoryConjunction
+   Data type
+         string
+   Description
+         The category mode defines who selected categories are checked. 5 options are available:
+
+         **1) Don't care, show all**
+
+         There is no restriction based on categories, even if categories are defined.
+
+         **2) Show items with selected categories (OR)**
+
+         All news records which belong to at least one of the selected categories are shown.
+
+         **3) Show items with selected categories (AND)**
+
+         All news records which belong to  **all** selected categories are shown.
+
+         **4) Do NOT show items with selected categories (OR)**
+
+         This is the negation of #2. All news records which don't belong to any of the selected categories are shown.
+
+         **5) Do NOT show items with selected categories (AND)**
+
+         This is the negation of #3. All news records which don't belong to all selected categories are shown.
+
+         :typoscript:`plugin.tx_news.settings.categoryConjunction =` or
+
+includeSubCategories
+""""""""""""""""""""
+.. container:: table-row
+
+   Property
+         includeSubCategories
+   Data type
+         boolean
+   Description
+         Include subcategories in the category selection
+
+         :typoscript:`plugin.tx_news.settings.includeSubCategories =1`
+
+archiveRestriction
+""""""""""""""""""
+.. container:: table-row
+
+   Property
+         archiveRestriction
+   Data type
+         string
+   Description
+         :typoscript:`plugin.tx_news.settings.archiveRestriction =1`
+
+         News records can hold an optional archive date. 2 modes are available:
+
+         **active: Only active (non archived)**
+
+         All news records with an archive date before the current date are shown.
+
+         **archived: Archived**
+
+         All news records with an archive date in the past are shown.
+
+         .. hint:: Records with no archive date aren't shown in any of the selected modes.
+
+timeRestriction
+"""""""""""""""
+
+.. container:: table-row
+
+   Property
+         timeRestriction
+   Data type
+         string
+   Description
+         :typoscript:`plugin.tx_news.settings.timeRestriction =-1 week`
+
+         The time limit offers 2 different options.
+
+         **Time in seconds**
+
+         Only news records with a maximum age (compared to the “Date & Time” field) are shown.
+
+         Example: An input like “86400” shows only news records which are one day (60 seconds \* 60 minutes \* 24 hours) old.
+
+         **Time in words**
+
+         It is also possible to define the maximum age in words. Examples are:
+
+         - 3 days
+         - last Monday
+         - 10 months 3 days 2 hours
+
+         Words need to be in English and are translated by using `strtotime <http://de.php.net/strtotime>`_ .
+
+
+timeRestrictionHigh
+"""""""""""""""""""
+.. container:: table-row
+
+   Property
+         timeRestrictionHigh
+   Data type
+         string
+   Description
+         See timeRestriction_ above. The configuration is the same but for the higher time end. (TODO rephrase).
+
+
+topNewsRestriction
+""""""""""""""""""
+.. container:: table-row
+
+   Property
+         topNewsRestriction
+   Data type
+         int
+   Description
+         :typoscript:`plugin.tx_news.settings.topNewsRestriction =2`
+
+         Any news record can be set as “Top News”. Therefore it is possible to show news records depending on this flag.
+
+         **1: Only Top News records**
+
+         Only news records which the checkbox set are shown.
+
+         **2: Except Top News records**
+
+         Only news records which don't have the checkbox set are shown.
+
+singleNews
+""""""""""
+
+previewHiddenRecords
+""""""""""""""""""""
+
+startingpoint
+"""""""""""""
+
+recursive
+"""""""""
+
+detailPid
+"""""""""
+
+listPid
+"""""""
+
+backPid
+"""""""
+
+limit
+"""""
+
+offset
+""""""
+
+tags
+""""
+
+hidePagination
+""""""""""""""
+
+list.paginate.itemsPerPage
+""""""""""""""""""""""""""
+
+topNewsFirst
+""""""""""""
+
+excludeAlreadyDisplayedNews
+"""""""""""""""""""""""""""
+
+disableOverrideDemand
+"""""""""""""""""""""
+
+media.maxWidth
+""""""""""""""
+
+media.maxHeight
+"""""""""""""""
+
+cropMaxCharacters
+"""""""""""""""""
+
+templateLayout
+""""""""""""""
+
+
+General settings
+----------------
 
 .. warning::
 	TODO: add plugin.tx_news.settings
