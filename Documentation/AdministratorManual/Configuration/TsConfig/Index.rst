@@ -55,12 +55,13 @@ The selectbox “Template Layout” inside a plugin can be easily be extended by
 
 	# Example:
 	tx_news.templateLayouts {
-			123 = Fobar
-			456 = Blub
+			1 = Fobar
+			2 = Another one
+			3 =  --div--,Group 2
+			4 = Blub
 	}
 
 will show 2 layout options with 123/456 as keys and Fobar/Blub as values.
-
 Inside the template it is then possible to define conditions with fluid by checking {settings.templateLayout}
 
 archive
