@@ -209,7 +209,7 @@ If you want to rewrite the URL, use a configuration like this one.
     	)
     );
 
-This will change the URL to /feed.rss
+This will change the URL to :code:`/feed.rss`.
 
 
 If you want to rewrite the URL, use a configuration like this one.

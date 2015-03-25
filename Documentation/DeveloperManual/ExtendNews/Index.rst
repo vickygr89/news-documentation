@@ -9,3 +9,8 @@
 Extend News
 -----------
 
+.. toctree::
+	:maxdepth: 5
+	:titlesonly:
+
+	ExtendFlexforms/Index

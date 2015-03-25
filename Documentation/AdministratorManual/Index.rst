@@ -19,8 +19,9 @@ Administrator manual
 	:maxdepth: 5
 	:titlesonly:
 
-	Configuration/Index
 	Installation/Index
+	Update/Index
+	Configuration/Index
 	Templates/Index
 	Migration/Index
 	BestPractice/Index

@@ -20,6 +20,8 @@ Best practice
 	IntegrationWithTypoScript/Index
 	ClearCache/Index
 	Realurl/Index
+	PredefineFields/Index
 	Rss/Index
+	ICalendar/Index
 
 
