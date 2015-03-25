@@ -5,47 +5,61 @@
 
 .. include:: ../../../Includes.txt
 
+This page is divided into the following sections:
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 1
+
+
 Plugin settings
 ---------------
+
+This section covers all settings, which can be defined in the plugin itself. To improve the usability,
+only those settings are shown which are needed by the chosen view (The setting orderBy_ is for example not needed in the single view).
+
+.. important:: Every setting can also be defined by TypoScript. However, please inform yourself about the setting overrideFlexformSettingsIfEmpty_.
 
 Properties
 ^^^^^^^^^^
 
 .. container:: ts-properties
 
-	==================================== =============== ===============
-	Property                             Sheet            Type
-	==================================== =============== ===============
-	orderBy_                              General         string
-	orderDirection_                       General         string
-	dateField_                            General         string
-	categories_                           General         string
-	categoryConjunction_                  General         string
-	includeSubCategories_                 General         boolean
-	archiveRestriction_                   General         int
-	timeRestriction_                      General         string
-	timeRestrictionHigh_                  General         string
-	topNewsRestriction_                   General         string
-	singleNews_                           General         string
-	previewHiddenRecords_                 General         string
-	startingpoint_                        General         string
-	recursive_                            General         int
-	detailPid_                            additional      int
-	listPid_                              additional      int
-	backPid_                              additional      int
-	limit_                                additional      int
-	offset_                               additional      int
-	tags_                                 additional      string
-	hidePagination_                       additional      boolean
-	`list.paginate.itemsPerPage`_         additional      int
-	topNewsFirst_                         additional      boolean
-	excludeAlreadyDisplayedNews_          additional      boolean
-	disableOverrideDemand_                additional      boolean
-	`media.maxWidth`_                     template        int
-	`media.maxHeight`_                    template        int
-	cropMaxCharacters_                    template        int
-	templateLayout_                       template        string
-	==================================== =============== ===============
+	==================================== ====================================== ============== ===============
+	Property                             Title                                  Sheet          Type
+	==================================== ====================================== ============== ===============
+	orderBy_                              Sort by                               General         string
+	orderDirection_                       Sort direction                        General         string
+	dateField_                            Date field to use                     General         string
+	categories_                           Category selection                    General         string
+	categoryConjunction_                  Category mode                         General         string
+	includeSubCategories_                 Include subcategories                 General         boolean
+	archiveRestriction_                   Archive                               General         int
+	timeRestriction_                      Time limit (LOW)                      General         string
+	timeRestrictionHigh_                  Time limit (HIGH):                    General         string
+	topNewsRestriction_                   Top News                              General         string
+	singleNews_                           Show a single news record             General         string
+	previewHiddenRecords_                 Allow preview of hidden records       General         string
+	startingpoint_                        Startingpoint                         General         string
+	recursive_                            Recursive                             General         int
+	detailPid_                            PageId for single news display        additional      int
+	listPid_                              PageId for list display               additional      int
+	backPid_                              PageId to return to                   additional      int
+	limit_                                Max records displayed                 additional      int
+	offset_                               Starting with given news record       additional      int
+	tags_                                 Tags                                  additional      string
+	hidePagination_                       Hide the pagination                   additional      boolean
+	`list.paginate.itemsPerPage`_         Items per Page                        additional      int
+	topNewsFirst_                         Sort "Top news" before                additional      boolean
+	excludeAlreadyDisplayedNews_          Exclude already displayed news        additional      boolean
+	disableOverrideDemand_                Disable override demand               additional      boolean
+	`media.maxWidth`_                     Max width for media elements          template        int
+	`media.maxHeight`_                    Max height for media elements         template        int
+	cropMaxCharacters_                    Length of teaser (in chars)           template        int
+	templateLayout_                       Template Layout                       template        string
+	==================================== ====================================== ============== ===============
 
 orderBy
 """""""
@@ -69,6 +83,8 @@ orderDirection
          string
    Description
          Define the sorting direction which can either be "asc" for ascending or "desc" descending. This can be either *asc* or *desc*.
+
+         :typoscript:`plugin.tx_news.settings.orderDirection = asc`
 
 dateField
 """""""""
@@ -234,60 +250,255 @@ topNewsRestriction
 
 singleNews
 """"""""""
+.. container:: table-row
+
+   Property
+         singleNews
+   Data type
+         int
+   Description
+         :typoscript:`plugin.tx_news.settings.singleNews =789`
+
+         It is possible to show a specific news record in the Detail view if the uid is set with this property.
+
 
 previewHiddenRecords
 """"""""""""""""""""
+.. container:: table-row
+
+   Property
+         previewHiddenRecords
+   Data type
+         int
+   Description
+         :typoscript:`plugin.tx_news.settings.enablePreviewOfHiddenRecords =1`
+
+         If set, also records which are normally hidden are displayed. This is especially helpful when using a detail view as preview mode for editors.
+
+         .. note:: Be aware to secure the page (e.g. using a TS condition to make it available only if an BE user is logged in) as this page could be called by anyone using any news record uid to see its content.
 
 startingpoint
 """""""""""""
+.. container:: table-row
+
+   Property
+         startingpoint
+   Data type
+         string
+   Description
+         :typoscript:`plugin.tx_news.settings.startingpoint =12,345`
+
+         If a startingpoint is set, all news records which are saved on one of the selected pages are shown, otherwise news of all pages are shown.
 
 recursive
 """""""""
+.. container:: table-row
+
+   Property
+         recursive
+   Data type
+         int
+   Description
+         :typoscript:`plugin.tx_news.settings.recursive = 2`
+
+         The search for pages as startingpoint can be extended by setting a recursive level.
+
 
 detailPid
 """""""""
+.. container:: table-row
+
+   Property
+         detailPid
+   Data type
+         int
+   Description
+         :typoscript:`plugin.tx_news.settings.detailPid =12`
+
+         This page is uses as target for the detail view. If nothing set, the current page is used.
+
+         .. hint::
+         Be aware that this setting might not be used, depending on the setting detailPidDetermination_.
+
 
 listPid
 """""""
+.. container:: table-row
+
+   Property
+         listPid
+   Data type
+         int
+   Description
+         :typoscript:`plugin.tx_news.settings.listPid =12`
+
+         This page is uses as target for the listings, e.g. the date menu and the Search form.
+
 
 backPid
 """""""
+.. container:: table-row
+
+   Property
+         backPid
+   Data type
+         int
+   Description
+         :typoscript:`plugin.tx_news.settings.backPid =12`
+
+         Define a page for the detail view to return to. This is typically the page on which the list view can be found.
 
 limit
 """""
+.. container:: table-row
+
+   Property
+         limit
+   Data type
+         int
+   Description
+         :typoscript:`plugin.tx_news.settings.limit =10`
+
+         Define the maximum records shown.
 
 offset
 """"""
+.. container:: table-row
+
+   Property
+         offset
+   Data type
+         int
+   Description
+         :typoscript:`plugin.tx_news.settings.offset =3`
+
+         Define the offset. If set to e.g. 2, the first 2 records are not shown. This is especially useful in combination with multiple plugins on the same page and the setting “Max records displayed”.
 
 tags
 """"
+.. container:: table-row
+
+   Property
+         tags
+   Data type
+         string
+   Description
+         TODO
 
 hidePagination
 """"""""""""""
+.. container:: table-row
+
+   Property
+         hidePagination
+   Data type
+         boolean
+   Description
+         TODO
 
 list.paginate.itemsPerPage
 """"""""""""""""""""""""""
+.. container:: table-row
+
+   Property
+         list.paginate.itemsPerPage
+   Data type
+         int
+   Description
+         TODO
 
 topNewsFirst
 """"""""""""
+.. container:: table-row
+
+   Property
+         topNewsFirst
+   Data type
+         boolean
+   Description
+         :typoscript:`plugin.tx_news.settings.topNewsFirst =1`
+
+         If set, news records with the checkbox **"Top News"** are shown before the others, no matter which sorting configuration is used.
+
 
 excludeAlreadyDisplayedNews
 """""""""""""""""""""""""""
+.. container:: table-row
+
+   Property
+         excludeAlreadyDisplayedNews
+   Data type
+         boolean
+   Description
+         :typoscript:`plugin.tx_news.settings.excludeAlreadyDisplayedNews =1`
+
+         If checked, news items which are already rendered are excluded in the current plugin. To exclude news items, the viewHelper <n:excludeDisplayedNews newsItem="{newsItem}" /> needs to be added to the template.
+         .. note:: The order of rendering in the frontend is essential as the information which news record is shown and should not be included anymore is fetched during runtime.
 
 disableOverrideDemand
 """""""""""""""""""""
+.. container:: table-row
+
+   Property
+         disableOverrideDemand
+   Data type
+         boolean
+   Description
+         :typoscript:`plugin.tx_news.settings.disableOverrideDemand =1`
+
+         If set, the settings of the plugin can't be overridden by arguments in the URL. The override is used, e.g. to show only news of a given category (category given in the URL).
+
 
 media.maxWidth
 """"""""""""""
+.. container:: table-row
+
+   Property
+         media.maxWidth
+   Data type
+         int
+   Description
+         TODO
 
 media.maxHeight
 """""""""""""""
+.. container:: table-row
+
+   Property
+         media.maxHeight
+   Data type
+         int
+   Description
+         TODO
 
 cropMaxCharacters
 """""""""""""""""
+.. container:: table-row
+
+   Property
+         cropMaxCharacters
+   Data type
+         int
+   Description
+         :typoscript:`plugin.tx_news.settings.cropMaxCharacters =100`
+
+         Define the maximum length of the teaser text before it is cropped.
+
 
 templateLayout
 """"""""""""""
+.. container:: table-row
+
+   Property
+         templateLayout
+   Data type
+         string
+   Description
+         :typoscript:`plugin.tx_news.settings.templateLayout = 123`
+
+         Select different layouts. TODO: add links to TsConfig + Template section
+
+         .. note:: Template variants need to be supported by the templates, otherwise this setting doesn't change anything!
 
 
 General settings
