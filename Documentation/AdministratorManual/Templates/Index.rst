@@ -9,3 +9,14 @@
 Templates
 ---------
 
+.. only:: html
+
+	This chapter is all about templating EXT:news
+
+.. toctree::
+	:maxdepth: 5
+	:titlesonly:
+
+	RenderContentElements/Index
+
+
