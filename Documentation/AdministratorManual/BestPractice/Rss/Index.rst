@@ -249,11 +249,13 @@ Troubleshooting
 Entity 'nbsp' not defined
 """""""""""""""""""""""""
 
-If you are getting this error, the easiest thing is to replace the character by using TypoScript: ::
+If you are getting this error, the easiest thing is to replace the character by using TypoScript:
 
-pageNewsRSS.10.stdWrap.replacement {
-	10  {
-		search = &nbsp;
-		replace = &#160;
+.. code-block:: typoscript
+
+	pageNewsRSS.10.stdWrap.replacement {
+		10  {
+			search = &nbsp;
+			replace = &#160;
+		}
 	}
-}
