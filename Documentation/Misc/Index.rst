@@ -19,5 +19,6 @@ Miscellaneous
 	:maxdepth: 5
 	:titlesonly:
 
+	Changelog/Index
 	MissingKnownErrors/Index
 	Faq/Index

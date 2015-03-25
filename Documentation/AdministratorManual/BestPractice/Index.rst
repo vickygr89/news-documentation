@@ -17,7 +17,9 @@ Best practice
 	:maxdepth: 5
 	:titlesonly:
 
+	IntegrationWithTypoScript/Index
 	ClearCache/Index
 	Realurl/Index
+	Rss/Index
 
 

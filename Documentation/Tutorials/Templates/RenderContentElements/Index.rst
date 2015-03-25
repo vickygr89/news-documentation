@@ -16,7 +16,9 @@ There are two options how to render those elements
 Using TypoScript
 ^^^^^^^^^^^^^^^^
 
-This is the default way in EXT:news. A basic TypoScript configuration is used to render those. This look like this::
+This is the default way in EXT:news. A basic TypoScript configuration is used to render those. This look like this:
+
+.. code-block:: typoscript
 
    lib.tx_news.contentElementRendering = RECORDS
    lib.tx_news.contentElementRendering {
@@ -26,7 +28,9 @@ This is the default way in EXT:news. A basic TypoScript configuration is used to
    }
 
 If you need to extend this, the best way is to introduce your own TypoScript which can be saved anywhere.
-This needs then to be referenced in the template. ::
+This needs then to be referenced in the template.
+
+.. code-block:: xml
 
    <f:if condition="{newsItem.contentElements">
            <f:cObject typoscriptObjectPath="lib.yourownTypoScript">{newsItem.contentElements}</f:cObject>
@@ -36,7 +40,9 @@ This needs then to be referenced in the template. ::
 Using Fluid
 ^^^^^^^^^^^
 
-You can also use fluid render the content elements. As an example: ::
+You can also use fluid render the content elements. As an example:
+
+.. code-block:: xml
 
 	<f:if condition="{newsItem.contentElements">
 		<f:for each="{newsItem.contentElements}" as="element">

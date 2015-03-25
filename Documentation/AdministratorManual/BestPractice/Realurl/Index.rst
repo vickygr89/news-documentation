@@ -15,7 +15,9 @@ Basic setup
 ^^^^^^^^^^^
 
 The most simple example is the following one. You can just add the section with copy&paste to
-the *postVarSets/_DEFAULT* section: ::
+the *postVarSets/_DEFAULT* section:
+
+.. code-block:: php
 
 	// EXT:news start
 	'news' => array(

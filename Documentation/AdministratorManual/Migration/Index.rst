@@ -6,13 +6,7 @@
 .. include:: ../../Includes.txt
 
 
-Templates
+Migration
 ---------
 
-.. toctree::
-	:maxdepth: 5
-	:titlesonly:
 
-	RenderInColumns/Index
-	RenderContentElements/Index
-	GroupNewsRecords/Index

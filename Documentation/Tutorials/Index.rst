@@ -21,3 +21,4 @@ Tutorials
 
 	Integration/Index
 	Templates/Index
+	ExternalTutorials/Index

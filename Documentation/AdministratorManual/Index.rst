@@ -22,4 +22,5 @@ Administrator manual
 	Configuration/Index
 	Installation/Index
 	Templates/Index
+	Migration/Index
 	BestPractice/Index
