@@ -18,4 +18,7 @@ Templates
 	:maxdepth: 5
 	:titlesonly:
 
+	Start/Index
+	TemplateSelector/Index
+	ViewHelpers/Index
 	Snippets/Index

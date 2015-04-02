@@ -14,3 +14,4 @@ Extend News
 	:titlesonly:
 
 	ExtendFlexforms/Index
+	ExtendingClasses/Index

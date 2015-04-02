@@ -7,7 +7,6 @@
 
 Simple snippets
 ---------------
-
 This section contains snippets making EXT:news more awesome which might be useful for your projects as well.
 
 .. only:: html
@@ -18,7 +17,6 @@ This section contains snippets making EXT:news more awesome which might be usefu
 
 Improved back links
 ^^^^^^^^^^^^^^^^^^^
-
 The back link on a detail page is a fixed link to a given page. However it might be that you use multiple list views
 and want to change the link depending on the given list view.
 
@@ -35,7 +33,6 @@ A nice solution would be to use this JavaScript jQuery snippet:
 
 Render category rootline
 ^^^^^^^^^^^^^^^^^^^^^^^^
-
 If you want to show not only the title of a single category which is related to the news item but the complete category rootline use this snippets.
 
 .. code-block:: xml
@@ -58,3 +55,9 @@ and
 			<li>{category.title}</li>
 		</f:if>
 	</f:section>
+
+Use current content element in the Template
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If you ever need information from the content element itself, you can use: ::
+
+	{contentObjectData.header}
