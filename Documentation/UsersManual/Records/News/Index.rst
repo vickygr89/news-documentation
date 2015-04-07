@@ -9,6 +9,8 @@
 News
 -----
 
+The news record is obviously the most important record in this extension.
+
 .. only:: html
 
    .. contents::
@@ -17,8 +19,6 @@ News
 
 News record
 ^^^^^^^^^^^
-
-TODO: add fields for internal, external page
 
 .. t3-field-list-table::
  :header-rows: 1
@@ -127,6 +127,13 @@ TODO: add fields for internal, external page
 
 Relations
 ^^^^^^^^^
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 2
+
 
 Media file
 """"""""""

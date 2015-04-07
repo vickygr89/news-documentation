@@ -38,6 +38,4 @@ Private/Personal support
 ------------------------
 If you need private or personal support, ask one of the developers for it.
 
-.. note::
-
-   Be aware that this support won't be free!
+**Be aware that this support might not be free!**
