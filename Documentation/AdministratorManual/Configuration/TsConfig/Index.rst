@@ -5,20 +5,17 @@
 
 .. include:: ../../../Includes.txt
 
-
+.. _tsconfig:
 TsConfig
 --------
-
 This section covers all configurations which can be set with TsConfig.
 Every configuration starts with ``tx_news.``.
-
 
 .. note::
  Just for clarification: TsConfig is in TYPO3 only used for configurations inside the backend!
 
 General configuration
 ^^^^^^^^^^^^^^^^^^^^^
-
 The general configuration covers options available during the creation and editing of news records.
 
 Properties
@@ -34,9 +31,9 @@ Properties
 	archive_                    string
 	=========================== =====================================
 
+.. _tsconfigSinglePid:
 singlePid
 ~~~~~~~~~
-
 It is possible to preview a news record if pressing the button “Save &
 Preview”. Therefore the ID of the page with the single view needs to
 be defined. ::
@@ -48,9 +45,9 @@ A plugin with the view “Detail view” must be available on that page.
 If a preview of hidden records needs to be allowed too, the checkbox
 “*Allow hidden records*” needs to be checked in the plugin.
 
+.. _tsconfigTemplateLayouts:
 templateLayouts
 ~~~~~~~~~~~~~~~
-
 The selectbox “Template Layout” inside a plugin can be easily be extended by using TsConfig.::
 
 	# Example:
@@ -64,9 +61,9 @@ The selectbox “Template Layout” inside a plugin can be easily be extended by
 will show 2 layout options with 123/456 as keys and Fobar/Blub as values.
 Inside the template it is then possible to define conditions with fluid by checking {settings.templateLayout}
 
+.. _tsconfigArchive:
 archive
 ~~~~~~~
-
 Use strtotime (see `http://www.php.net/strtotime <http://www.php.net/strtotime>`_ ) to predefine the archive date.::
 
 	# Example:
@@ -74,6 +71,7 @@ Use strtotime (see `http://www.php.net/strtotime <http://www.php.net/strtotime>`
 
 will set the archive date on the the next friday.
 
+.. _tsconfigAdministration:
 Administration module
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -90,9 +88,9 @@ Properties
 	allowedPage_                 integer
 	=========================== =====================================
 
+.. _tsconfigPreselect:
 preselect
 ~~~~~~~~~
-
 Predefine the form in the administration module. The possible fields for the preselection are:
 
 - recursive
@@ -113,9 +111,9 @@ Predefine the form in the administration module. The possible fields for the pre
 		}
 	}
 
+.. _tsconfigDefaultPid:
 defaultPid
 ~~~~~~~~~~
-
 If no page is selected in the page tree, any record created in the administration module would be saved on the root page.
 If this is not desired, the pid can be defined by using defaultPid.<tablename>::
 
@@ -124,9 +122,9 @@ If this is not desired, the pid can be defined by using defaultPid.<tablename>::
 
 News records will be saved on page with ID 123.
 
+.. _tsconfigRedirectToPageOnStart:
 redirectToPageOnStart
 ~~~~~~~~~~~~~~~~~~~~~
-
 If no page is selected, the user will be redirected to the given page. ::
 
 	# Example:
@@ -134,13 +132,12 @@ If no page is selected, the user will be redirected to the given page. ::
 
 The user will be redirected to the page with the uid 456.
 
+.. _tsconfigAllowedPage:
 allowedPage
 ~~~~~~~~~~~
-
 If defined, the administration module will redirect the user always to the given page, no matter what defined in the page tree. ::
 
 	# Example:
 	tx_news.module.allowedPage = 123
 
 The user will be redirected to the page with the uid 123.
-

@@ -15,4 +15,5 @@ Examples
 	:maxdepth: 5
 	:titlesonly:
 
+	CrossLink/Index
 	Configuration/Index

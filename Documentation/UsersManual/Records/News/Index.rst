@@ -5,6 +5,7 @@
 
 .. include:: ../../.../Includes.txt
 
+.. _recordNews:
 
 News
 -----
@@ -82,8 +83,7 @@ News record
          Content elements
    :Description:
          Add content elements to a news records. This field can be
-         hidden by disabling the setting in extension manager's settings.
-         TODO: add link
+         hidden by disabling the setting in :ref:`extension manager's settings <extensionManager>`.
  - :Field:
          Link to this Page
    :Description:

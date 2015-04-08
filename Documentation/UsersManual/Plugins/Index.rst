@@ -5,10 +5,10 @@
 
 .. include:: ../../Includes.txt
 
+.. _plugin:
 
 Plugin
 ------
-
 The news plugin is used to output a defined list of records.
 
 It can be added to create a content element with the type "*Plugin*" and by selecting the plugin type "**News system**".
@@ -29,7 +29,6 @@ TODO
 
 Detail
 ^^^^^^
-
 There are 2 typical use cases for this action:
 
 - Use this action to show a full news record which is linked by a list view.

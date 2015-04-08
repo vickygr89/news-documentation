@@ -57,8 +57,8 @@ News system
 	:glob:
 
 	Introduction/Index
-	UsersManual/Index
 	AdministratorManual/Index
+	UsersManual/Index
 	DeveloperManual/Index
 	Tutorials/Index
 	Misc/Index

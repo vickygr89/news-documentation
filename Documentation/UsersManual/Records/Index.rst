@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _records:
 
 Records
 -------

@@ -5,6 +5,8 @@
 
 .. include:: ../../../Includes.txt
 
+.. _extendFlexforms:
+
 Extend flexforms
 ----------------
 Following fields of the plugin configuration can be extended without overriding the complete flexform configuration.

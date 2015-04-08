@@ -3,10 +3,9 @@
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. include:: ../../Includes.txt
+.. _labels-for-crossreferencing:
 
-.. _hooks:
+Labels for cross-referencing
+----------------------------
 
-Hooks & Signals
----------------
-
+.. ref-targets-list::

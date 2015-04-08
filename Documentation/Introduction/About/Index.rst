@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _about:
 
 What does it do?
 ================
@@ -19,6 +20,9 @@ technologies which are provided by the TYPO3 CMS.
 - Checkbox "Top news" to flag important news
 - Built in support for content elements
 - Support for opengraph and social platforms in default template
+
+.. hint::
+   *A quote about EXT:news:* It is a highly customizable framework for chronological organized content - much more than just a news list!
 
 Screenshots
 -----------

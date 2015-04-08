@@ -24,6 +24,6 @@ Before an update
 ^^^^^^^^^^^^^^^^
 
 Before you start the update procedure, please read the changelog of all versions which have been
-released in the meantime! You can find those in the manual at TODO LINK.
+released in the meantime! You can find those in the manual :ref:`here <changelog>`.
 
 Furthermore it is **always** a good idea to do updates on a dedicated test installation or at least create a database backup.

@@ -6,7 +6,7 @@
 .. include:: ../Includes.txt
 
 
-.. _users-manual:
+.. _userManual:
 
 Users manual
 ============
@@ -21,5 +21,6 @@ Users manual
 	:maxdepth: 5
 	:titlesonly:
 
+	HowToStart/Index
 	Records/Index
 	Plugins/Index

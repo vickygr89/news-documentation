@@ -5,6 +5,8 @@
 
 .. include:: ../../Includes.txt
 
+.. _thanks:
+
 Say thanks!
 ===========
 This extension and manual has been created in endless hours, mostly by a single person.
