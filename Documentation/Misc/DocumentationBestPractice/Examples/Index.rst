@@ -3,12 +3,8 @@
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-
-
-.. _configuration:
-
-Configuration Reference
-=======================
+Examples
+========
 
 http://wiki.typo3.org/ReST_Syntax
 
@@ -59,17 +55,6 @@ for example).
 
 .. _configuration-typoscript:
 
-TypoScript Reference
---------------------
-
-Possible subsections: Reference of TypoScript options.
-The construct below show the recommended structure for
-TypoScript properties listing and description.
-
-Properties should be listed in the order in which they
-are executed by your extension, but the first should be
-alphabetical for easier access.
-
 When detailing data types or standard TypoScript
 features, don't hesitate to cross-link to the TypoScript
 Reference as shown below. See the :file:`Settings.yml`
@@ -101,19 +86,6 @@ Property details
 
 
 .. _ts-plugin-tx-extensionkey-stdwrap:
-
-allWrap
-"""""""
-
-:typoscript:`plugin.tx_extensionkey.allWrap =` :ref:`t3tsref:data-type-wrap`
-
-Wraps the whole item.
-
-
-.. _ts-plugin-tx-extensionkey-wrapitemandsub:
-
-wrapItemAndSub
-""""""""""""""
 
 :typoscript:`plugin.tx_extensionkey.wrapItemAndSub =` :ref:`t3tsref:data-type-wrap`
 

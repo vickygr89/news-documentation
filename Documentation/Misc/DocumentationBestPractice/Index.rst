@@ -4,16 +4,16 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 
-Examples
-========
+Documentation best practice
+===========================
 
 .. only:: html
 
-	Examples
+	Best practice for Documentation with rest
 
 .. toctree::
 	:maxdepth: 5
 	:titlesonly:
 
 	CrossLink/Index
-	Configuration/Index
+	Examples/Index

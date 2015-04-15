@@ -14,6 +14,7 @@ This page is divided into the following sections:
         :depth: 1
 
 .. _ts:
+
 Plugin settings
 ---------------
 This section covers all settings, which can be defined in the plugin itself. To improve the usability,
@@ -61,6 +62,7 @@ Properties
 	==================================== ====================================== ============== ===============
 
 .. _tsOrderBy:
+
 orderBy
 """""""
 .. container:: table-row
@@ -74,6 +76,7 @@ orderBy
          The chapter ":ref:`Extend news > Extend flexforms <extendClasses>`" shows how the select box can be extended.
 
 .. _tsOrderDirection:
+
 orderDirection
 """"""""""""""
 .. container:: table-row
@@ -88,6 +91,7 @@ orderDirection
          :typoscript:`plugin.tx_news.settings.orderDirection = asc`
 
 .. _tsDateField:
+
 dateField
 """""""""
 .. container:: table-row
@@ -100,6 +104,7 @@ dateField
          The date menu builds a menu by year and month and the given news records. The menu can either be built by using the date field or the archive field.
 
 .. _tsCategories:
+
 categories
 """"""""""
 .. container:: table-row
@@ -117,6 +122,7 @@ categories
          	Don't forget to set the category mode too! See property below.
 
 .. _tsCategoryConjunction:
+
 categoryConjunction
 """""""""""""""""""
 
@@ -152,6 +158,7 @@ categoryConjunction
          :typoscript:`plugin.tx_news.settings.categoryConjunction =` or
 
 .. _tsIncludeSubCategories:
+
 includeSubCategories
 """"""""""""""""""""
 .. container:: table-row
@@ -166,6 +173,7 @@ includeSubCategories
          :typoscript:`plugin.tx_news.settings.includeSubCategories =1`
 
 .. _tsArchiveRestriction:
+
 archiveRestriction
 """"""""""""""""""
 .. container:: table-row
@@ -190,6 +198,7 @@ archiveRestriction
          .. hint:: Records with no archive date aren't shown in any of the selected modes.
 
 .. _tsTimeRestriction:
+
 timeRestriction
 """""""""""""""
 
@@ -221,6 +230,7 @@ timeRestriction
          Words need to be in English and are translated by using `strtotime <http://de.php.net/strtotime>`_ .
 
 .. _tsTimeRestrictionHigh:
+
 timeRestrictionHigh
 """""""""""""""""""
 .. container:: table-row
@@ -233,6 +243,7 @@ timeRestrictionHigh
          See timeRestriction_ above. The configuration is the same but for the higher time end. (TODO rephrase).
 
 .. _tsTopNewsRestriction:
+
 topNewsRestriction
 """"""""""""""""""
 .. container:: table-row
@@ -255,6 +266,7 @@ topNewsRestriction
          Only news records which don't have the checkbox set are shown.
 
 .. _tsSingleNews:
+
 singleNews
 """"""""""
 .. container:: table-row
@@ -269,6 +281,7 @@ singleNews
          It is possible to show a specific news record in the Detail view if the uid is set with this property.
 
 .. _tsPreviewHiddenRecords:
+
 previewHiddenRecords
 """"""""""""""""""""
 .. container:: table-row
@@ -285,6 +298,7 @@ previewHiddenRecords
          .. note:: Be aware to secure the page (e.g. using a TS condition to make it available only if an BE user is logged in) as this page could be called by anyone using any news record uid to see its content.
 
 .. _tsStartingpoint:
+
 startingpoint
 """""""""""""
 .. container:: table-row
@@ -299,6 +313,7 @@ startingpoint
          If a startingpoint is set, all news records which are saved on one of the selected pages are shown, otherwise news of all pages are shown.
 
 .. _tsRecursive:
+
 recursive
 """""""""
 .. container:: table-row
@@ -313,6 +328,7 @@ recursive
          The search for pages as startingpoint can be extended by setting a recursive level.
 
 .. _tsDetailPid:
+
 detailPid
 """""""""
 .. container:: table-row
@@ -326,10 +342,10 @@ detailPid
 
          This page is uses as target for the detail view. If nothing set, the current page is used.
 
-         .. hint::
-         Be aware that this setting might not be used, depending on the setting detailPidDetermination_.
+         .. hint:: Be aware that this setting might not be used, depending on the setting detailPidDetermination_.
 
 .. _tsListPid:
+
 listPid
 """""""
 .. container:: table-row
@@ -344,6 +360,7 @@ listPid
          This page is uses as target for the listings, e.g. the date menu and the Search form.
 
 .. _tsBackPid:
+
 backPid
 """""""
 .. container:: table-row
@@ -358,6 +375,7 @@ backPid
          Define a page for the detail view to return to. This is typically the page on which the list view can be found.
 
 .. _tsLimit:
+
 limit
 """""
 .. container:: table-row
@@ -372,6 +390,7 @@ limit
          Define the maximum records shown.
 
 .. _tsOffset:
+
 offset
 """"""
 .. container:: table-row
@@ -386,6 +405,7 @@ offset
          Define the offset. If set to e.g. 2, the first 2 records are not shown. This is especially useful in combination with multiple plugins on the same page and the setting “Max records displayed”.
 
 .. _tsTags:
+
 tags
 """"
 .. container:: table-row
@@ -398,6 +418,7 @@ tags
          TODO
 
 .. _tsHidePagination:
+
 hidePagination
 """"""""""""""
 .. container:: table-row
@@ -410,6 +431,7 @@ hidePagination
          TODO
 
 .. _tsListPaginateItemsPerPage:
+
 list.paginate.itemsPerPage
 """"""""""""""""""""""""""
 .. container:: table-row
@@ -422,6 +444,7 @@ list.paginate.itemsPerPage
          TODO
 
 .. _tsTopNewsFirst:
+
 topNewsFirst
 """"""""""""
 .. container:: table-row
@@ -436,6 +459,7 @@ topNewsFirst
          If set, news records with the checkbox **"Top News"** are shown before the others, no matter which sorting configuration is used.
 
 .. _tsExcludeAlreadyDisplayedNews:
+
 excludeAlreadyDisplayedNews
 """""""""""""""""""""""""""
 .. container:: table-row
@@ -451,6 +475,7 @@ excludeAlreadyDisplayedNews
          .. note:: The order of rendering in the frontend is essential as the information which news record is shown and should not be included anymore is fetched during runtime.
 
 .. _tsDisableOverrideDemand:
+
 disableOverrideDemand
 """""""""""""""""""""
 .. container:: table-row
@@ -465,6 +490,7 @@ disableOverrideDemand
          If set, the settings of the plugin can't be overridden by arguments in the URL. The override is used, e.g. to show only news of a given category (category given in the URL).
 
 .. _tsMediaMaxWidth:
+
 media.maxWidth
 """"""""""""""
 .. container:: table-row
@@ -477,6 +503,7 @@ media.maxWidth
          TODO
 
 .. _tsMediaMaxHeight:
+
 media.maxHeight
 """""""""""""""
 .. container:: table-row
@@ -489,6 +516,7 @@ media.maxHeight
          TODO
 
 .. _tsCropMaxCharacters:
+
 cropMaxCharacters
 """""""""""""""""
 .. container:: table-row
@@ -503,6 +531,7 @@ cropMaxCharacters
          Define the maximum length of the teaser text before it is cropped.
 
 .. _tsTemplateLayout:
+
 templateLayout
 """"""""""""""
 .. container:: table-row
@@ -563,6 +592,7 @@ Properties
 	==================================== ===============
 
 .. _tsCssFile:
+
 cssFile
 """""""
 
@@ -580,6 +610,7 @@ cssFile
 Path to the css file. This is included with the Layouts.
 
 .. _tsFormat:
+
 format
 """"""
 
@@ -595,6 +626,7 @@ format
          html
 
 .. _tsOverrideFlexformSettingsIfEmpty:
+
 overrideFlexformSettingsIfEmpty
 """""""""""""""""""""""""""""""
 
@@ -615,6 +647,7 @@ overrideFlexformSettingsIfEmpty
          cropMaxCharacters,dateField,timeRestriction,orderBy,orderDirection,backPid,listPid,startingpoint,recursive,list.paginate.itemsPerPage,list.paginate.templatePath
 
 .. _tsDisplayDummyIfNoMedia:
+
 displayDummyIfNoMedia
 """""""""""""""""""""
 
@@ -633,6 +666,7 @@ displayDummyIfNoMedia
          1
 
 .. _tsDetailPidDetermination:
+
 detailPidDetermination
 """"""""""""""""""""""
 
@@ -672,12 +706,14 @@ detailPidDetermination
          flexform, categories, default
 
 .. _tsDefaultDetailPid:
+
 defaultDetailPid
 """"""""""""""""
 
 *See above*
 
 .. _tsOrderByAllowed:
+
 orderByAllowed
 """"""""""""""
 .. container:: table-row
@@ -694,6 +730,7 @@ orderByAllowed
          sorting,author,uid,title,teaser,author,tstamp,crdate,datetime,categories.title
 
 .. _tsAnalyticsSocial:
+
 analytics.social
 """"""""""""""""
 .. container:: table-row
@@ -715,6 +752,7 @@ analytics.social
 			}
 
 .. _tsRelatedFiles:
+
 relatedFiles
 """"""""""""
 .. container:: table-row
@@ -738,6 +776,7 @@ relatedFiles
 			}
 
 .. _tsDemandClass:
+
 demandClass
 """""""""""
 .. container:: table-row
@@ -753,6 +792,7 @@ demandClass
 			This is just important if you want to extend EXT:news. :ref:`See here <extendClasses>`
 
 .. _tsLinkHrDate:
+
 link.hrDate
 """""""""""
 
@@ -789,6 +829,7 @@ link.hrDate
          0
 
 .. _tsLinkTypesOpeningInNewWindow:
+
 link.typesOpeningInNewWindow
 """"""""""""""""""""""""""""
 
@@ -805,6 +846,7 @@ link.typesOpeningInNewWindow
          2
 
 .. _tsLinkSkipControllerAndAction:
+
 link.skipControllerAndAction
 """"""""""""""""""""""""""""
 .. container:: table-row
@@ -819,6 +861,7 @@ link.skipControllerAndAction
          2
 
 .. _tsFacebookLocale:
+
 facebookLocale
 """"""""""""""
 
@@ -834,6 +877,7 @@ facebookLocale
          en\_US
 
 .. _tsDisqusLocale:
+
 disqusLocale
 """"""""""""
 
@@ -849,6 +893,7 @@ disqusLocale
          en
 
 .. _tsGooglePlusLocale:
+
 googlePlusLocale
 """"""""""""""""
 
@@ -864,6 +909,7 @@ googlePlusLocale
          en
 
 .. _tsInterfaces:
+
 interfaces
 """"""""""
 
@@ -889,6 +935,7 @@ interfaces
 			}
 
 .. _tsOpengraph:
+
 opengraph
 """""""""
 
@@ -928,6 +975,7 @@ opengraph
 		}
 
 .. _tsDetailMedia:
+
 detail.media
 """"""""""""
 
@@ -969,6 +1017,7 @@ detail.media
 			}
 
 .. _tsDetailErrorHandling:
+
 detail.errorHandling
 """"""""""""""""""""
 .. container:: table-row
@@ -987,6 +1036,7 @@ detail.errorHandling
          pageNotFoundHandler
 
 .. _tsDetailCheckPidOfNewsRecord:
+
 detail.checkPidOfNewsRecord
 """""""""""""""""""""""""""
 .. container:: table-row
@@ -1002,6 +1052,7 @@ detail.checkPidOfNewsRecord
          0
 
 .. _tsDetailRegisterProperties:
+
 detail.registerProperties
 """""""""""""""""""""""""
 .. container:: table-row
@@ -1029,6 +1080,7 @@ detail.registerProperties
           keywords,title
 
 .. _tsDetailShowSocialShareButtons:
+
 detail.showSocialShareButtons
 """""""""""""""""""""""""""""
 .. container:: table-row
@@ -1043,6 +1095,7 @@ detail.showSocialShareButtons
          1
 
 .. _tsDetailDisqusdisqusShortname:
+
 detail.disqusShortname
 """"""""""""""""""""""
 .. container:: table-row
@@ -1055,6 +1108,7 @@ detail.disqusShortname
          If set, the commenting system of disqus (www.disqus.com) is used with the given name.
 
 .. _tsListMedia:
+
 list.media
 """"""""""
 
@@ -1082,6 +1136,7 @@ list.media
 		}
 
 .. _tsListPaginate:
+
 list.paginate
 """""""""""""
 
@@ -1144,6 +1199,7 @@ list.paginate
 		}
 
 .. _tsListRss:
+
 list.rss
 """"""""
 
@@ -1173,6 +1229,7 @@ list.rss
 		}
 
 .. _tsSearchFields:
+
 search.fields
 """""""""""""
 

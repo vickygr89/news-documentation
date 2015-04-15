@@ -6,6 +6,7 @@
 .. include:: ../../../Includes.txt
 
 .. _tsconfig:
+
 TsConfig
 --------
 This section covers all configurations which can be set with TsConfig.
@@ -32,6 +33,7 @@ Properties
 	=========================== =====================================
 
 .. _tsconfigSinglePid:
+
 singlePid
 ~~~~~~~~~
 It is possible to preview a news record if pressing the button “Save &
@@ -46,6 +48,7 @@ If a preview of hidden records needs to be allowed too, the checkbox
 “*Allow hidden records*” needs to be checked in the plugin.
 
 .. _tsconfigTemplateLayouts:
+
 templateLayouts
 ~~~~~~~~~~~~~~~
 The selectbox “Template Layout” inside a plugin can be easily be extended by using TsConfig.::
@@ -62,6 +65,7 @@ will show 2 layout options with 123/456 as keys and Fobar/Blub as values.
 Inside the template it is then possible to define conditions with fluid by checking {settings.templateLayout}
 
 .. _tsconfigArchive:
+
 archive
 ~~~~~~~
 Use strtotime (see `http://www.php.net/strtotime <http://www.php.net/strtotime>`_ ) to predefine the archive date.::
@@ -72,6 +76,7 @@ Use strtotime (see `http://www.php.net/strtotime <http://www.php.net/strtotime>`
 will set the archive date on the the next friday.
 
 .. _tsconfigAdministration:
+
 Administration module
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -89,6 +94,7 @@ Properties
 	=========================== =====================================
 
 .. _tsconfigPreselect:
+
 preselect
 ~~~~~~~~~
 Predefine the form in the administration module. The possible fields for the preselection are:
@@ -112,6 +118,7 @@ Predefine the form in the administration module. The possible fields for the pre
 	}
 
 .. _tsconfigDefaultPid:
+
 defaultPid
 ~~~~~~~~~~
 If no page is selected in the page tree, any record created in the administration module would be saved on the root page.
@@ -123,6 +130,7 @@ If this is not desired, the pid can be defined by using defaultPid.<tablename>::
 News records will be saved on page with ID 123.
 
 .. _tsconfigRedirectToPageOnStart:
+
 redirectToPageOnStart
 ~~~~~~~~~~~~~~~~~~~~~
 If no page is selected, the user will be redirected to the given page. ::
@@ -133,6 +141,7 @@ If no page is selected, the user will be redirected to the given page. ::
 The user will be redirected to the page with the uid 456.
 
 .. _tsconfigAllowedPage:
+
 allowedPage
 ~~~~~~~~~~~
 If defined, the administration module will redirect the user always to the given page, no matter what defined in the page tree. ::

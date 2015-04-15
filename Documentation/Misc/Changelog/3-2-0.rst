@@ -39,9 +39,6 @@ A lot of code changed in this version. The most important changes are:
 All Changes
 ===========
 
-::
-
-
 This list has been created by using: ::
 
 	git log --since="2015/XX/XX" --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short
