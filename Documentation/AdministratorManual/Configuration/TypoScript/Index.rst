@@ -563,6 +563,7 @@ Properties
 	==================================== ===============
 	cssFile_                              string
 	format_                               string
+	useStdWrap_                           string
 	overrideFlexformSettingsIfEmpty_      string
 	displayDummyIfNoMedia_                boolean
 	detailPidDetermination_               string
@@ -625,6 +626,31 @@ format
    Default
          html
 
+useStdWrap
+""""""""""
+
+.. container:: table-row
+
+   Property
+         useStdWrap
+   Data type
+         string
+   Description
+         Add all TypoScript properties as a comma separated list which need support for stdWrap.
+
+         As an example: ::
+
+         settings {
+           useStdWrap = singleNews
+
+           singleNews.stdWrap.cObject = CONTENT
+           singleNews.stdWrap.cObject {
+            ...
+           }
+
+   Default
+         html
+
 .. _tsOverrideFlexformSettingsIfEmpty:
 
 overrideFlexformSettingsIfEmpty
@@ -661,7 +687,7 @@ displayDummyIfNoMedia
          If set and no preview image is defined, a placeholder image is shown.
          The placeholder itself is defined with TypoScript ::
 
-			plugin.tx_news.settings.list.media.dummyImage = typo3conf/ext/news/Resources/Public/Images/dummy-preview-image.png
+           plugin.tx_news.settings.list.media.dummyImage = typo3conf/ext/news/Resources/Public/Images/dummy-preview-image.png
    Default
          1
 
@@ -689,8 +715,8 @@ detailPidDetermination
          This type tries to get the detail page from the plugin's setting *PageId for single news display* which
          can also be set by using TypoScript. ::
 
-			# If set via TypoScript, also add detailPid to the setting "overrideFlexformSettingsIfEmpty"
-			plugin.tx_news.settings.detailPid = 123
+           # If set via TypoScript, also add detailPid to the setting "overrideFlexformSettingsIfEmpty"
+           plugin.tx_news.settings.detailPid = 123
 
          **categories**
 
@@ -700,7 +726,7 @@ detailPidDetermination
 
          This type tries to get the value from the setting *defaultDetailPid*. ::
 
-			plugin.tx_news.settings.defaultDetailPid = 456
+           plugin.tx_news.settings.defaultDetailPid = 456
 
    Default
          flexform, categories, default
@@ -745,11 +771,11 @@ analytics.social
    Default
          ::
 
-			analytics.social {
-				facebookLike = 1
-				facebookShare = 1
-				twitter = 1
-			}
+           analytics.social {
+           	facebookLike = 1
+           	facebookShare = 1
+           	twitter = 1
+           }
 
 .. _tsRelatedFiles:
 
@@ -766,14 +792,14 @@ relatedFiles
    Default
          ::
 
-			relatedFiles {
-				fileSizeLabels =
-				download {
-					labelStdWrap {
-						cObject = TEXT
-					}
-				}
-			}
+           relatedFiles {
+           	fileSizeLabels =
+           	download {
+           		labelStdWrap {
+                      cObject = TEXT
+           		}
+           	}
+           }
 
 .. _tsDemandClass:
 
@@ -789,7 +815,7 @@ demandClass
          Overload the demand object which is used to build the queries.
 
          .. note::
-			This is just important if you want to extend EXT:news. :ref:`See here <extendClasses>`
+           This is just important if you want to extend EXT:news. :ref:`See here <extendClasses>`
 
 .. _tsLinkHrDate:
 
@@ -925,14 +951,14 @@ interfaces
    Default
          ::
 
-			 interfaces {
-				media {
-					video = GeorgRinger\News\MediaRenderer\Audio\Mp3Html5,GeorgRinger\News\MediaRenderer\Audio\Mp3,GeorgRinger\News\MediaRenderer\Video\Quicktime,GeorgRinger\News\MediaRenderer\Video\File,GeorgRinger\News\MediaRenderer\Video\Youtube,GeorgRinger\News\MediaRenderer\Video\Vimeo,GeorgRinger\News\MediaRenderer\Video\Videosites
-				}
-				falMedia {
-					video = GeorgRinger\News\MediaRenderer\Video\Fal
-				}
-			}
+            interfaces {
+           	media {
+           		video = GeorgRinger\News\MediaRenderer\Audio\Mp3Html5,GeorgRinger\News\MediaRenderer\Audio\Mp3,GeorgRinger\News\MediaRenderer\Video\Quicktime,GeorgRinger\News\MediaRenderer\Video\File,GeorgRinger\News\MediaRenderer\Video\Youtube,GeorgRinger\News\MediaRenderer\Video\Vimeo,GeorgRinger\News\MediaRenderer\Video\Videosites
+           	}
+           	falMedia {
+           		video = GeorgRinger\News\MediaRenderer\Video\Fal
+           	}
+           }
 
 .. _tsOpengraph:
 
@@ -959,19 +985,19 @@ opengraph
          ::
 
 		opengraph {
-			site_name =  {$plugin.tx_news.opengraph.site_name}
-			type = article
-			admins =
-			email =
-			phone_number =
-			fax_number =
-			latitude =
-			longitude =
-			street-address =
-			locality =
-			region =
-			postal-code =
-			country-name =
+           site_name =  {$plugin.tx_news.opengraph.site_name}
+           type = article
+           admins =
+           email =
+           phone_number =
+           fax_number =
+           latitude =
+           longitude =
+           street-address =
+           locality =
+           region =
+           postal-code =
+           country-name =
 		}
 
 .. _tsDetailMedia:
@@ -989,32 +1015,32 @@ detail.media
         Configuration for media elements in the detail view.
 
         .. attention::
-			If you need different options like using **width** instead of **maxWidth** you need also
-			to adopt the template files!
+           If you need different options like using **width** instead of **maxWidth** you need also
+           to adopt the template files!
 
    Default
          ::
 
-			detail.media {
-				image {
-					maxWidth = 282
-					maxHeight =
+           detail.media {
+           	image {
+           		maxWidth = 282
+           		maxHeight =
 
-					# Get lightbox settings from css_styled_content
-					lightbox {
-						enabled = {$styles.content.imgtext.linkWrap.lightboxEnabled}
-						class = {$styles.content.imgtext.linkWrap.lightboxCssClass}
-						width = {$styles.content.imgtext.linkWrap.width}
-						height = {$styles.content.imgtext.linkWrap.height}
-						rel = lightbox[myImageSet]
-					}
-				}
+           		# Get lightbox settings from css_styled_content
+           		lightbox {
+                      enabled = {$styles.content.imgtext.linkWrap.lightboxEnabled}
+                      class = {$styles.content.imgtext.linkWrap.lightboxCssClass}
+                      width = {$styles.content.imgtext.linkWrap.width}
+                      height = {$styles.content.imgtext.linkWrap.height}
+                      rel = lightbox[myImageSet]
+           		}
+           	}
 
-				video {
-					width = 282
-					height = 300
-				}
-			}
+           	video {
+           		width = 282
+           		height = 300
+           	}
+           }
 
 .. _tsDetailErrorHandling:
 
@@ -1074,7 +1100,7 @@ detail.registerProperties
          	}
 
          .. danger::
-			TODO Check that!
+           TODO Check that!
 
    Default
           keywords,title
@@ -1122,17 +1148,17 @@ list.media
         Configuration for media elements in the list view.
 
         .. attention::
-			If you need different options like using **width** instead of **maxWidth** you need also
-			to adopt the template files!
+           If you need different options like using **width** instead of **maxWidth** you need also
+           to adopt the template files!
 
    Default
          ::
 
 		list.media {
-			image {
-				maxWidth = 100
-				maxHeight = 100
-			}
+           image {
+           	maxWidth = 100
+           	maxHeight = 100
+           }
 		}
 
 .. _tsListPaginate:
@@ -1190,12 +1216,12 @@ list.paginate
          ::
 
 		list.paginate {
-			itemsPerPage = 10
-			insertAbove = 1
-			insertBelow = 1
-			templatePath =
-			prevNextHeaderTags = 1
-			maximumNumberOfLinks = 3
+           itemsPerPage = 10
+           insertAbove = 1
+           insertBelow = 1
+           templatePath =
+           prevNextHeaderTags = 1
+           maximumNumberOfLinks = 3
 		}
 
 .. _tsListRss:
@@ -1218,14 +1244,14 @@ list.rss
          ::
 
 		rss {
-			channel {
-				title = {$plugin.tx_news.rss.channel.title}
-				description = {$plugin.tx_news.rss.channel.description}
-				language = {$plugin.tx_news.rss.channel.language}
-				copyright = {$plugin.tx_news.rss.channel.copyright}
-				generator = {$plugin.tx_news.rss.channel.generator}
-				link = {$plugin.tx_news.rss.channel.link}
-			}
+           channel {
+           	title = {$plugin.tx_news.rss.channel.title}
+           	description = {$plugin.tx_news.rss.channel.description}
+           	language = {$plugin.tx_news.rss.channel.language}
+           	copyright = {$plugin.tx_news.rss.channel.copyright}
+           	generator = {$plugin.tx_news.rss.channel.generator}
+           	link = {$plugin.tx_news.rss.channel.link}
+           }
 		}
 
 .. _tsSearchFields:
@@ -1243,8 +1269,8 @@ search.fields
         Comma separated list of fields which are used for the search.
 
         .. hint::
-			You can also search in relations, e.g. the category title by using :code:`categories.title`
-			TODO: check that!
+           You can also search in relations, e.g. the category title by using :code:`categories.title`
+           TODO: check that!
 
    Default
         teaser,title,bodytext

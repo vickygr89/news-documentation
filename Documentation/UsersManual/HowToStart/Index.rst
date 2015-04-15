@@ -62,6 +62,9 @@ The extension ships some TypoScript code which needs to be included.
 
 #. Select **News (news)** at the field *Include static (from extensions):*
 
+|img-plugin-ts|
+
+
 .. _howToStartAddPlugin:
 
 Add a plugin to a page

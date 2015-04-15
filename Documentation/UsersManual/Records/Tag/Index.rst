@@ -11,13 +11,13 @@ Tag
 ---
 Tags are not mandatory but make it easier to structure news records.
 
+|img-record-tag|
+
 Add a tag
 ^^^^^^^^^
 #. Switch to any sysfolder in the backend of your TYPO3 installation
 #. Click on the + icon.
 #. Select "Tag" which can be found in the section *News system*.
-
-TODO: add screenshot
 
 .. tip:: A new tag can also be directly created within a news record. TODO link
 

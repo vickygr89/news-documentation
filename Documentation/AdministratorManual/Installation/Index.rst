@@ -47,4 +47,4 @@ necessary to include the static TypoScript of news. This is very easy:
    screenshot
 
 
-TODO: screenshot
+TODO: duplicate content

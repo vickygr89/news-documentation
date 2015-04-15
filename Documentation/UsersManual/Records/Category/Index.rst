@@ -15,11 +15,12 @@ EXT:news uses the **System Categories** since version *3.0.0*.
 
 Add a category
 ^^^^^^^^^^^^^^
+
+|img-record-category|
+
 #. Switch to any page or sysfolder in the backend of your TYPO3 installation
 #. Click on the + icon.
 #. Select "Category" which can be found in the section *System Records*.
-
-TODO: add screenshot
 
 Properties
 ^^^^^^^^^^
