@@ -62,4 +62,3 @@ News system
 	DeveloperManual/Index
 	Tutorials/Index
 	Misc/Index
-	Examples/Index

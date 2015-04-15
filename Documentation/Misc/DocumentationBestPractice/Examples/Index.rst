@@ -6,6 +6,18 @@
 Examples
 ========
 
+Headline 2
+----------
+
+Headline 3
+^^^^^^^^^^
+
+Headline 4
+""""""""""
+
+Headline 5
+~~~~~~~~~~
+
 http://wiki.typo3.org/ReST_Syntax
 
 http://docs.typo3.org/typo3cms/drafts/github/marble/DocumentationStarter/Chapter1/SubChapter/TopicC.html
@@ -69,11 +81,11 @@ Properties
 	=========================== ===================================== ======================= ====================
 	Property                    Data type                             :ref:`t3tsref:stdwrap`  Default
 	=========================== ===================================== ======================= ====================
-	allWrap_                    :ref:`t3tsref:data-type-wrap`         yes                     :code:`<div>|</div>`
+	fobar_                      :ref:`t3tsref:data-type-wrap`         yes                     :code:`<div>|</div>`
 	`subst\_elementUid`_        :ref:`t3tsref:data-type-boolean`      no                      0
-	wrapItemAndSub_             :ref:`t3tsref:data-type-wrap`
 	=========================== ===================================== ======================= ====================
 
+.. _fobar:
 
 Property details
 ^^^^^^^^^^^^^^^^
@@ -85,7 +97,7 @@ Property details
 		:depth: 1
 
 
-.. _ts-plugin-tx-extensionkey-stdwrap:
+.. _subst_elementUid`:
 
 :typoscript:`plugin.tx_extensionkey.wrapItemAndSub =` :ref:`t3tsref:data-type-wrap`
 
@@ -99,11 +111,8 @@ subst_elementUid
 
 :typoscript:`plugin.tx_extensionkey.subst_elementUid =` :ref:`t3tsref:data-type-boolean`
 
-If set, all appearances of the string ``{elementUid}`` in the total
-element html-code (after wrapped in allWrap_) are substituted with the
-uid number of the menu item. This is useful if you want to insert an
-identification code in the HTML in order to manipulate properties with
-JavaScript.
+text text text text text text text text text text text text text text text text text text
+text text text text text text text text text text text text text text text text text text
 
 
 API
@@ -131,20 +140,9 @@ or some other language:
 	);
 
 
-Headline 3
-----------
 
-Headline 4
-^^^^^^^^^^
 
-Headline 5
-""""""""""
-
-Headline 6
-~~~~~~~~~~
-
-Alternatively a grid table can be used. As tip, Emacs editor provides some facilities_ to edit grid table. A recommended tutorial can be found at http://www.emacswiki.org/emacs/TableMode. ::
-
+Alternatively a grid table can be used. As tip, Emacs editor provides some facilities to edit grid table. A recommended tutorial can be found at http://www.emacswiki.org/emacs/TableMode. ::
 
 	+------------+------------+-----------+
 	| Header 1   | Header 2   | Header 3  |
@@ -157,21 +155,3 @@ Alternatively a grid table can be used. As tip, Emacs editor provides some facil
 	+------------+ span rows. | - contain |
 	| body row 4 |            | - blocks. |
 	+------------+------------+-----------+
-
-Side bar
-========
-
-A sidebar is typically offset by a border and "floats" to the side of the page; the document's main text may flow around::
-
-	.. sidebar:: Here a side bar
-
-		This box is going to be shifted to the right corner which can be useful to display pointers or other kind of side information.
-
-
-Substitutions
-=============
-
-ReST supports “substitutions”, which are pieces of text and/or markup referred to in the text by |name|. Substitution are to be included in file ``_IncludedDirectives`` to be avaiable across the documentation. They are defined like footnotes with explicit markup blocks, like this::
-
-	.. |name| replace:: replacement *text*
-
