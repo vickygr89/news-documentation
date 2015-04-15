@@ -33,8 +33,7 @@ Important changes
 
 A lot of code changed in this version. The most important changes are:
 
-* Fo
-* Bar
+* A new index has been added to the database table ```tx_news_domain_model_news``` to improve the performance of translated records.
 
 All Changes
 ===========

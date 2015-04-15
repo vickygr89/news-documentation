@@ -58,6 +58,4 @@ and
 
 Use current content element in the Template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If you ever need information from the content element itself, you can use: ::
-
-	{contentObjectData.header}
+If you ever need information from the content element itself, you can use ``{contentObjectData.header}``.

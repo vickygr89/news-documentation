@@ -20,6 +20,8 @@ TODO: add screenshots
         :local:
         :depth: 1
 
+.. _howToStartCreateRecords:
+
 Create the records
 ------------------
 Before any news record can be shown in the frontend those need to be
@@ -28,7 +30,7 @@ created.
 #. Therefore create a new sysfolder and switch to the list module. (Of
    course you can also use an existing sysfolder or normal page).
 
-#. Use the icon in the topbar “Create new record” and search for “News
+#. **List view:** Use the icon in the topbar “Create new record” and search for “News
    system” and its records. You should see “News”, “News category” and
    “News Tag”.
 
@@ -39,8 +41,32 @@ created.
    #. Click on “News” to create a new news record. Fill as many fields you
       want to field, a required one is only the header.
 
+#. **Administration module:** Use the custom administration module which can be found
+   in the module menu inside the section "*Web*".
+
+.. hint::
+
+   More information about the records can be found here: :ref:`news record <recordNews>`, :ref:`category record <recordCategory>`, :ref:`tag record <recordTag>`.
+
+.. _howToStartIncludeTypoScript:
+
+Include static template
+-----------------------
+The extension ships some TypoScript code which needs to be included.
+
+#. Switch to the root page of your site.
+
+#. Switch to the **Template module** and select *Info/Modify*.
+
+#. Press the link **Edit the whole template record** and switch to the tab *Includes*.
+
+#. Select **News (news)** at the field *Include static (from extensions):*
+
+.. _howToStartAddPlugin:
+
 Add a plugin to a page
 ----------------------
+A plugin is used to render a defined selection of records in the frontend.
 Follow this steps to add a plugin to a page:
 
 #. Create a new page “Detail” which will be used to show the full news

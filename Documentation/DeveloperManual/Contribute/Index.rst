@@ -55,7 +55,9 @@ If you would like to contribute code for bugfixes, features or documentation, pl
 Get the latest version from git
 """""""""""""""""""""""""""""""
 
-It is assumed you have set up ssh (username and port) and git (username and email) already. You can copy and paste the following commands directly: ::
+It is assumed you have set up ssh (username and port) and git (username and email) already. You can copy and paste the following commands directly:
+
+.. code-block:: bash
 
 	# Clone the news repository into the folder extension_builder.
 	git clone git://git.typo3.org/TYPO3CMS/Extensions/news.git

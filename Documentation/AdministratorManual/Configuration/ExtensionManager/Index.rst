@@ -54,7 +54,7 @@ Property details
 		:depth: 1
 
 
-.. _extensionManagerRemoveListActionFromFlexforms:
+.. _extensionManager-removeListActionFromFlexforms:
 
 removeListActionFromFlexforms
 """""""""""""""""""""""""""""

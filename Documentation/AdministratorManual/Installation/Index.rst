@@ -30,7 +30,9 @@ The extension needs to be installed as any other extension of TYPO3 CMS:
 
 Latest version from git
 -----------------------
-You can get the latest version from git by using the git command::
+You can get the latest version from git by using the git command:
+
+.. code-block:: bash
 
    git clone git://git.typo3.org/TYPO3CMS/Extensions/news.git
 

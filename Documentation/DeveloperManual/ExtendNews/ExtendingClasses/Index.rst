@@ -33,7 +33,10 @@ All you need is a new extension with a structure like: ::
 			YourNewViewHelper.php
 	ext_emconf.php
 
-and you can then use your ViewHelper in the template like this: ::
+and you can then use your ViewHelper in the template like this:
+
+
+.. code-block:: html
 
 	{namespace y=Tx_NameOfYourExtension_ViewHelpers}
     <y:yourNew>test</y:yourNew>
@@ -58,14 +61,16 @@ You are finished with this step if you can add content to the new field in the b
 **Create the model**
 
 Create a model for your additional field.
-Important: the structure needs to match the one of EXT:news. If you wanna extend *Tx_News_Domain_Model_News*,
+Important: the structure needs to match the one of EXT:news. If you wanna extend *\GeorgRinger\News\Domain\Model\News*,
 your class needs to be *Tx_Workshop_Domain_Model_News*, which means having the file *News.php* in *EXT:workshop/Classes/Domain/Model/*.
 
-The content looks like: ::
+The content looks like:
+
+.. code-block:: php
 
 	<?php
 
-		class Tx_Workshop_Domain_Model_News extends Tx_News_Domain_Model_News {
+		class Tx_Workshop_Domain_Model_News extends \GeorgRinger\News\Domain\Model\News {
 
 			/**
 			* @var string
@@ -104,13 +109,7 @@ clear the cache and you are done. EXT:news will fetch the content of all files w
 Use the new field in the template
 *********************************
 
-You can now use the new field in the template by using ::
-
-	{newsItem.txWorkshopTitle}
-
-or ::
-
-	{newsItem.workshopTitle}
+You can now use the new field in the template by using ``{newsItem.txWorkshopTitle}`` or ``{newsItem.workshopTitle}``.
 
 
 Extend the sorting properties in the plugin settings
@@ -120,7 +119,8 @@ Default values in "Sort by" are: **tstamp,datetime,crdate,title**.
 
 Add a new value (e.g. starttime in the below example): ::
 
+.. code-block:: php
+
 	$GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['orderByNews'] .= ',starttime';
 
-Add this in ext_tables.php of a custom extension.
-
+Add this in ``ext_tables.php`` of a custom extension.
