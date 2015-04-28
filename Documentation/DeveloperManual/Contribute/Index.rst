@@ -55,18 +55,8 @@ If you would like to contribute code for bugfixes, features or documentation, pl
 Get the latest version from git
 """""""""""""""""""""""""""""""
 
-It is assumed you have set up ssh (username and port) and git (username and email) already. You can copy and paste the following commands directly:
-
-.. code-block:: bash
-
-	# Clone the news repository into the folder extension_builder.
-	git clone git://git.typo3.org/TYPO3CMS/Extensions/news.git
-	cd news
-	# Install the gerrit commit-msg hook for the distribution clone
-	scp -p -P 29418 <USERNAME>@review.typo3.org:hooks/commit-msg .git/hooks/
-	# Configure review.typo3.org as default push target for submitting code for review
-	git config remote.origin.pushurl ssh://review.typo3.org:29418/TYPO3CMS/Extensions/news.git
-	git config remote.origin.push HEAD:refs/for/master
+It is assumed you have set up SSH (username and port) and GIT (username and email) already. You may use this handy tool,
+which provides the console commands to setup your repository: http://www.wwwision.de/githelper/#TYPO3CMS/Extensions/news.git
 
 
 Create a change
