@@ -30,6 +30,7 @@ If EXT:news should be integrated by using TypoScript only, you can use this code
 	  userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
 	  extensionName = News
 	  pluginName = Pi1
+	  vendorName = GeorgRinger
 
 	  switchableControllerActions {
 		News {
@@ -61,6 +62,7 @@ This is the example of how to display list and detail view on the same page.
 	lib.news {
 			userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
 			pluginName = Pi1
+			vendorName = GeorgRinger
 			extensionName = News
 			controller = News
 			settings =< plugin.tx_news.settings
