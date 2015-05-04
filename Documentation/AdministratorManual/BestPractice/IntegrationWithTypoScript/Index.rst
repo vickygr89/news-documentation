@@ -145,7 +145,8 @@ If you want to show the news title in the breadcrumb menu if the single view is 
                 field = title
                 htmlSpecialChars = 1
             }
-            wrap =  <li>|</li>
+			stdWrap.wrap = <li>|</li>
+			stdWrap.required = 1
         }
     }
 
