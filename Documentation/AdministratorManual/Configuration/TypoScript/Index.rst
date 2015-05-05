@@ -640,13 +640,14 @@ useStdWrap
 
          As an example: ::
 
-         settings {
-           useStdWrap = singleNews
+			 settings {
+			   useStdWrap = singleNews
 
-           singleNews.stdWrap.cObject = CONTENT
-           singleNews.stdWrap.cObject {
-            ...
-           }
+			   singleNews.stdWrap.cObject = CONTENT
+			   singleNews.stdWrap.cObject {
+				...
+			   }
+			 }
 
    Default
          html

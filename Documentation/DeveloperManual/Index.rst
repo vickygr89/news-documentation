@@ -20,5 +20,4 @@ Developer manual
 	:titlesonly:
 
 	ExtendNews/Index
-	HooksSignals/Index
 	Contribute/Index
