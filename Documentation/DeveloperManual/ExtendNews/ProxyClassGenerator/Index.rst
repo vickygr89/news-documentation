@@ -15,6 +15,8 @@ Follow this chapter to learn how to add new fields or actions.
 It is important to know how this concept is implemented. If a class should be extended, EXT:news will generate
 a new file containing the original class of the extension itself and all other classes which should extended it.
 
+.. attention:: This generator works only with the news version 3.2.0 or higher.
+
 .. warning:: The drawbacks are easy to identify:
 
  	- Don't use any use statements as those are currently ignored!
@@ -170,6 +172,8 @@ As the class ``Domain/Model/News`` should be extended, create a file at the same
 			$this->locationSimple = $locationSimple;
 		}
 	}
+
+.. hint:: If you are using the extension extension_builder, this class might have been created for you already.
 
 Clear system cache
 ^^^^^^^^^^^^^^^^^^
