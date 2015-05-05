@@ -63,7 +63,7 @@ The file  ``ext_emconf.php`` holds all basic information about the extension lik
 		'constraints' => array(
 			'depends' => array(
 				'typo3' => '6.2',
-				'news' => '3.0.0',
+				'news' => '3.2.0',
 			),
 			'conflicts' => array(),
 			'suggests' => array(),
