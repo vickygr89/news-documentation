@@ -50,9 +50,9 @@ Property details
 .. only:: html
 
 	.. contents::
-:local:
+		:local:
 		:depth: 1
-
+git
 
 .. _extensionManager-removeListActionFromFlexforms:
 
