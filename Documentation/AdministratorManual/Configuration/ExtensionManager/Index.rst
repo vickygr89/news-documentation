@@ -49,10 +49,9 @@ Property details
 
 .. only:: html
 
-	.. contents::
-		:local:
-		:depth: 1
-
+   .. contents::
+        :local:
+        :depth: 1
 
 .. _extensionManager-removeListActionFromFlexforms:
 
