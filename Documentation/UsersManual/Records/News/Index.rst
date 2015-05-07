@@ -102,7 +102,7 @@ News record
          Tags
    :Description:
          Add tags to the news record. Use the suggest wizard to search for existing tags and to insert new tags.
-         TODO: add link + hint for auto add
+         The pid can be set in the :ref:`Extension Manager <extensionManagerTagPid>` or in :ref:`TsConfig <tsconfigTagPid>`.
  - :Field:
          Related News
    :Description:

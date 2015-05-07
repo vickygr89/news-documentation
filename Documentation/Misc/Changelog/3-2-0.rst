@@ -23,7 +23,7 @@ Dropping the mm table for tt_content relations
 	This is only relevant if you use the flag **Use content element relation** which needs to be set
 	in the configuration inside the *Extension Manager*.
 
-Previously, tt_content elements have been added by using the mm relation table ```tx_news_domain_model_news_ttcontent_mm``` which had some drawbacks.
+Previously, tt_content elements have been added by using the mm relation table ``tx_news_domain_model_news_ttcontent_mm`` which had some drawbacks.
 The usage of this table is now dropped which means that after updating, you need to run the Update Wizard in the *Install Tool* to migrate the relations.
 
 The Upgrade Wizard is called **EXT:news Migrate from tt_content mm relation**.
@@ -33,7 +33,7 @@ Important changes
 
 A lot of code changed in this version. The most important changes are:
 
-* A new index has been added to the database table ```tx_news_domain_model_news``` to improve the performance of translated records.
+* A new index has been added to the database table ``tx_news_domain_model_news`` to improve the performance of translated records.
 
 All Changes
 ===========

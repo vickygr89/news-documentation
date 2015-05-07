@@ -13,7 +13,7 @@ The news plugin is used to output a defined list of records.
 
 It can be added to create a content element with the type "*Plugin*" and by selecting the plugin type "**News system**".
 
-TODO: screenshot
+.. TODO: screenshot
 
 .. only:: html
 

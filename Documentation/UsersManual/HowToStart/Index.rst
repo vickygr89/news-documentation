@@ -12,7 +12,7 @@ How to start
 This walkthrough will help you to implement the extension news at your
 TYPO3 site. The installation is covered :ref:`here <installation>`.
 
-TODO: add screenshots
+.. TODO: add screenshots
 
 .. only:: html
 
@@ -47,22 +47,6 @@ created.
 .. hint::
 
    More information about the records can be found here: :ref:`news record <recordNews>`, :ref:`category record <recordCategory>`, :ref:`tag record <recordTag>`.
-
-.. _howToStartIncludeTypoScript:
-
-Include static template
------------------------
-The extension ships some TypoScript code which needs to be included.
-
-#. Switch to the root page of your site.
-
-#. Switch to the **Template module** and select *Info/Modify*.
-
-#. Press the link **Edit the whole template record** and switch to the tab *Includes*.
-
-#. Select **News (news)** at the field *Include static (from extensions):*
-
-|img-plugin-ts|
 
 
 .. _howToStartAddPlugin:

@@ -9,8 +9,6 @@
 Template selector
 =================
 
-TODO: rewwork, maybe move
-
 This entry should help you to use different templates for different (list) views.
 
 Using the following Page TsConfig the editor can select the layouts in the news plugin: ::
@@ -22,7 +20,9 @@ Using the following Page TsConfig the editor can select the layouts in the news 
 
 You can use any number to identify your layout and any label to describe it.
 
-Now it is possible to use a condition in the template to change the layouts, and e.g. load a different partial: ::
+Now it is possible to use a condition in the template to change the layouts, and e.g. load a different partial:
+
+.. code-block:: html
 
 	<f:if condition="{news}">
 		<f:then>
@@ -54,7 +54,7 @@ As you can see in this example a different partial is loaded if the layout 99 is
 
 
 Custom Templates by using TypoScript
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can define a custom TypoScript setting which you can check in the view later on.
 
@@ -66,7 +66,9 @@ The TypoScript could look like: ::
 		}
 	}
 
-And then you can use a condition like this: ::
+And then you can use a condition like this:
+
+.. code-block:: html
 
 	<f:if condition="{settings.isLatest}">
 		<f:then>

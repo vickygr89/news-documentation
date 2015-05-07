@@ -5,7 +5,12 @@
 
 .. include:: ../../../Includes.txt
 
-This page is divided into the following sections:
+.. _ts:
+
+TypoScript
+==========
+
+This page is divided into the following sections which are all configurable by using TypoScript:
 
 .. only:: html
 
@@ -13,7 +18,6 @@ This page is divided into the following sections:
         :local:
         :depth: 1
 
-.. _ts:
 
 Plugin settings
 ---------------
@@ -223,9 +227,9 @@ timeRestriction
 
          It is also possible to define the maximum age in words. Examples are:
 
-         - 3 days
+         - -3 days
          - last Monday
-         - 10 months 3 days 2 hours
+         - -10 months 3 days 2 hours
 
          Words need to be in English and are translated by using `strtotime <http://de.php.net/strtotime>`_ .
 
@@ -240,7 +244,7 @@ timeRestrictionHigh
    Data type
          string
    Description
-         See timeRestriction_ above. The configuration is the same but for the higher time end. (TODO rephrase).
+         See timeRestriction_ above. The configuration is the same but for the higher time end.
 
 .. _tsTopNewsRestriction:
 
@@ -415,7 +419,7 @@ tags
    Data type
          string
    Description
-         TODO
+         Add a constraint to the given tags
 
 .. _tsHidePagination:
 
@@ -428,7 +432,7 @@ hidePagination
    Data type
          boolean
    Description
-         TODO
+         If defined, the pagination is not shown.
 
 .. _tsListPaginateItemsPerPage:
 
@@ -441,7 +445,7 @@ list.paginate.itemsPerPage
    Data type
          int
    Description
-         TODO
+         Define the amount of news items shown per page in the pagination.
 
 .. _tsTopNewsFirst:
 
@@ -500,7 +504,7 @@ media.maxWidth
    Data type
          int
    Description
-         TODO
+         Maximum width of assets
 
 .. _tsMediaMaxHeight:
 
@@ -513,7 +517,7 @@ media.maxHeight
    Data type
          int
    Description
-         TODO
+         Maximum height of assets
 
 .. _tsCropMaxCharacters:
 
@@ -550,8 +554,7 @@ templateLayout
 General settings
 ----------------
 
-.. warning::
-	TODO: add plugin.tx_news.settings
+Any setting needs to be prefixed with  :typoscript:`plugin.tx_news.settings.`.
 
 Properties
 ^^^^^^^^^^
@@ -1090,7 +1093,6 @@ detail.registerProperties
          string
    Description
          Define a list of properties you want to be able to use via the TypoScript option *register*.
-         TODO: link
 
          ::
 
@@ -1100,8 +1102,7 @@ detail.registerProperties
          		data = newsTitle
          	}
 
-         .. danger::
-           TODO Check that!
+         .. TODO Check that!
 
    Default
           keywords,title
@@ -1271,7 +1272,6 @@ search.fields
 
         .. hint::
            You can also search in relations, e.g. the category title by using :code:`categories.title`
-           TODO: check that!
 
    Default
         teaser,title,bodytext

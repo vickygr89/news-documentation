@@ -115,7 +115,7 @@ Install the extension
 ^^^^^^^^^^^^^^^^^^^^^
 Now you should be able to install the extension and if you open a news record, you should see the new field in the last tab.
 
-TODO: what if something wrong
+.. TODO: what if something wrong
 
 
 2) Register the class

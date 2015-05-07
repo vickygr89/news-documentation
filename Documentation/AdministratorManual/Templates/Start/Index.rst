@@ -23,10 +23,10 @@ other sites.
 Changing paths of the template
 ------------------------------
 You should never edit the original templates of an extension as those changes will vanish if you upgrade the extension.
-As any extbase based extension, you can find the templates in the directory ```Resources/Private/```.
+As any extbase based extension, you can find the templates in the directory ``Resources/Private/``.
 
 If you want to change a template, copy the desired files to the directory where you store the templates.
-This can be a directory in ```fileadmin``` or a custom extension. Multiple fallbacks can be defined which makes it far easier to customize the templates.
+This can be a directory in ``fileadmin`` or a custom extension. Multiple fallbacks can be defined which makes it far easier to customize the templates.
 
 .. code-block:: typoscript
 
@@ -99,12 +99,12 @@ A layout can look this:
 		<f:render section="content" />
 	</div>
 
-This means that the output of the section ```content``` will be rendered inside a div with the class ```news```.
+This means that the output of the section ``content`` will be rendered inside a div with the class ``news``.
 
 Templates
 ^^^^^^^^^
 Every action (like the list view, the detail view, date menu or a category listing) needs its own template which can be
-found at ```Templates/<Model>/<ActionName>.html```.
+found at ``Templates/<Model>/<ActionName>.html``.
 
 If **Layouts** are used, it is required to define the name of the Layout (which is identical to the file name of the Layout file).
 
@@ -121,13 +121,13 @@ If **Layouts** are used, it is required to define the name of the Layout (which 
 
 Partials
 ^^^^^^^^
-Partials are used within templates to be able to reuse code snippets. If you open the template ```News/List.html``` you will see the partial:
+Partials are used within templates to be able to reuse code snippets. If you open the template ``News/List.html`` you will see the partial:
 
 .. code-block:: html
 
 	<f:render partial="List/Item" arguments="{newsItem: newsItem, settings:settings, className:className, view:'list'}"/>
 
-This will embed the output of the partial which is located at ```Partials/List/Item.html``` (as stated in the attribute  *partial* ). All
+This will embed the output of the partial which is located at ``Partials/List/Item.html`` (as stated in the attribute  *partial* ). All
 arguments which are used in the attribute *arguments* are available in the partial itself.
 
 You can create your own partials and name them as you like

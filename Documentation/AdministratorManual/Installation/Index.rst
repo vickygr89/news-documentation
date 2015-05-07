@@ -38,13 +38,15 @@ You can get the latest version from git by using the git command:
 
 Preparation: Include static TypoScript
 --------------------------------------
-Be aware that before any plugin can be rendered in the frontend it is
-necessary to include the static TypoScript of news. This is very easy:
 
-#. Switch to the template module and to the your template record.
+The extension ships some TypoScript code which needs to be included.
 
-#. Add the news extension to the “Include Static” list as shown in the
-   screenshot
+#. Switch to the root page of your site.
 
+#. Switch to the **Template module** and select *Info/Modify*.
 
-TODO: duplicate content
+#. Press the link **Edit the whole template record** and switch to the tab *Includes*.
+
+#. Select **News (news)** at the field *Include static (from extensions):*
+
+|img-plugin-ts|

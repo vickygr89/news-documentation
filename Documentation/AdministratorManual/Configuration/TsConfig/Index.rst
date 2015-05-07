@@ -30,6 +30,7 @@ Properties
 	singlePid_                  integer
 	templateLayouts_            array
 	archive_                    string
+	tagPid_                     integer
 	=========================== =====================================
 
 .. _tsconfigSinglePid:
@@ -74,6 +75,16 @@ Use strtotime (see `http://www.php.net/strtotime <http://www.php.net/strtotime>`
 	tx_news.predefine.archive = next friday
 
 will set the archive date on the the next friday.
+
+.. _tsconfigTagPid:
+
+tagPid
+~~~~~~
+Besides the configuration in the :ref:`Extension Manager <extensionManagerTagPid>` it is also possible to define the pid of tags created directly in the news record by Using TsConfig: ::
+
+	# Example:
+	tx_news.tagPid = 123
+
 
 .. _tsconfigAdministration:
 

@@ -13,7 +13,7 @@ Extension Manager
 Some general settings can be configured in the Extension Manager.
 If you need to configure those, switch to the module "Extension Manager", select the extenison "**news**" and press on the configure-icon!
 
-todo: screenshot
+.. todo: screenshot
 
 The settings are divided into several tabs and described here in detail:
 
@@ -50,7 +50,7 @@ Property details
 .. only:: html
 
 	.. contents::
-		:local:
+:local:
 		:depth: 1
 
 
@@ -129,13 +129,37 @@ If set and a news record is copied, the news record will be prepended with the s
 
 categoryRestriction
 """""""""""""""""""
-TODO
+Define an additional constraint for the categories inside a news record. Possible options are:
+
+None
+~~~~
+No additional constraint is used.
+
+Page TsConfig
+~~~~~~~~~~~~~
+By using TsConfig it is possible to define those pages which contain the available categories: ::
+
+	# Example: Only use categories which are saved in the pages with ID 12 and 34
+	TCEFORM.tx_news_domain_model_news.categories.PAGE_TSCONFIG_IDLIST = 12,34
+
+Categories from current page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Only those categories are shown in a news record which are located at the **same** page.
+
+Categories from page which is defined in page properties
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Only those categories are shown in a news record which are saved in the page defined in the page properties in the field **General Record Storage Page**.
+
+Categories from site root
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Only those categories are shown which are saved at the root page.
+
 
 .. _extensionManagerCategoryBeGroupTceFormsRestriction:
 
 categoryBeGroupTceFormsRestriction
 """"""""""""""""""""""""""""""""""
-TODO
+If activated, an editor needs to have permissions to all categories added to a news item to be able to edit this record.
 
 .. _extensionManagerContentElementRelation:
 

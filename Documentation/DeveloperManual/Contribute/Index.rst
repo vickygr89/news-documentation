@@ -91,6 +91,3 @@ http://wiki.typo3.org/Contribution_Walkthrough_Tutorials
 
 The project uses FLOW3 commit message rules:
 http://flow3.typo3.org/documentation/coding-guidelines/?user_staticdocinclude_pi2[filepath]=flow3.codingguidelines&cHash=533b192f067e518dfb7d67008cb870db#id36288854
-
-.. warning::
-	TODO: check links & sectipon

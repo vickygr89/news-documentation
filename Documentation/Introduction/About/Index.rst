@@ -24,10 +24,6 @@ technologies which are provided by the TYPO3 CMS.
 .. hint::
    *A quote about EXT:news:* It is a highly customizable framework for chronological organized content - much more than just a news list!
 
-Screenshots
------------
-TODO
+.. TODO screenshots
 
-Frontend Demos
---------------
-TODO
+.. TODO frontend demo
