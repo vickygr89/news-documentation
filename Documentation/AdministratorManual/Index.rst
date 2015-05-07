@@ -8,8 +8,8 @@
 
 .. _admin-manual:
 
-Administrator manual
-====================
+For administrators
+==================
 
 .. only:: html
 

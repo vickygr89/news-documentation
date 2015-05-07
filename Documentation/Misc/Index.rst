@@ -21,5 +21,4 @@ Miscellaneous
 
 	Changelog/Index
 	MissingKnownErrors/Index
-	Faq/Index
 	DocumentationBestPractice/Index

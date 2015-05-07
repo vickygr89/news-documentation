@@ -15,5 +15,5 @@ Documentation best practice
 	:maxdepth: 5
 	:titlesonly:
 
-	CrossLink/Index
 	Examples/Index
+	CrossLink/Index

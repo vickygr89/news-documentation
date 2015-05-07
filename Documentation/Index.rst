@@ -23,9 +23,6 @@ News system
 	:Language:
 		en
 
-	:Description:
-		EXT:news **Important:** This version is in progress and absolut incomplete!
-
 	:Keywords:
 		news
 
@@ -34,9 +31,6 @@ News system
 
 	:Author:
 		Georg Ringer
-
-	:Email:
-		-
 
 	:License:
 		This document is published under the Open Content License
@@ -52,7 +46,7 @@ News system
 	**Table of Contents**
 
 .. toctree::
-	:maxdepth: 5
+	:maxdepth: 3
 	:titlesonly:
 	:glob:
 

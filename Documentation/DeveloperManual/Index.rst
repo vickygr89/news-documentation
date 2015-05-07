@@ -8,8 +8,8 @@
 
 .. _developer-manual:
 
-Developer manual
-================
+For developers
+==============
 
 .. only:: html
 

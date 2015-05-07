@@ -8,8 +8,8 @@
 
 .. _userManual:
 
-Users manual
-============
+For editors
+===========
 
 .. only:: html
 

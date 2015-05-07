@@ -22,10 +22,6 @@ http://wiki.typo3.org/ReST_Syntax
 
 http://docs.typo3.org/typo3cms/drafts/github/marble/DocumentationStarter/Chapter1/SubChapter/TopicC.html
 
-Technical information: Installation, Reference of TypoScript options,
-configuration options on system level, how to extend it, the technical
-details, how to debug it and so on.
-
 .. note:: This is a note admonition.
 
 	These notes are similar to tips, but usually contain information you should pay attention to. It might be details about a step that a whole operation hinges on or it may highlight an essential sequence of tasks.
@@ -33,21 +29,13 @@ details, how to debug it and so on.
 	- The note contains all indented body elements following.
 	- It includes this bullet list.
 
-
 .. tip::
 
    Take a break from time to time!
 
-Admonitions should be used to warn the users about potential
-pitfalls, attract their attention to important elements
-or just add some notes for for information (further reading,
-for example).
-
 .. important::
 
-   Remember to always say "please" when asking your software to
-   do something.
-
+   Remember to always say "please" when asking your software to do something.
 
 .. attention::
 
@@ -57,20 +45,6 @@ for example).
 .. warning::
 
 	These notes draw your attention to things that can interrupt your service or website if not done correctly. Some actions can be difficult to undo.
-
-
-
-..
-
-   Remember to always say "please" when asking your software to
-   do something.
-
-.. _configuration-typoscript:
-
-When detailing data types or standard TypoScript
-features, don't hesitate to cross-link to the TypoScript
-Reference as shown below. See the :file:`Settings.yml`
-file for the declaration of cross-linking keys.
 
 
 Properties
@@ -140,18 +114,15 @@ or some other language:
 	);
 
 
+Tables
+------
 
-
-Alternatively a grid table can be used. As tip, Emacs editor provides some facilities to edit grid table. A recommended tutorial can be found at http://www.emacswiki.org/emacs/TableMode. ::
-
-	+------------+------------+-----------+
-	| Header 1   | Header 2   | Header 3  |
-	+============+============+===========+
-	| body row 1 | column 2   | column 3  |
-	+------------+------------+-----------+
-	| body row 2 | Cells may span columns.|
-	+------------+------------+-----------+
-	| body row 3 | Cells may  | - Cells   |
-	+------------+ span rows. | - contain |
-	| body row 4 |            | - blocks. |
-	+------------+------------+-----------+
++------------+------------+-----------+
+| Header 1   | Header 2   | Header 3  |
++============+============+===========+
+| body row 1 | column 2   | column 3  |
++------------+------------+-----------+
+| body row 3 | Cells may  | - Cells   |
++------------+ span rows. | - contain |
+| body row 4 |            | - blocks. |
++------------+------------+-----------+
