@@ -66,6 +66,20 @@ the paths
            }
    }
 
+
+Change path of the pagination widget
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The path of the pagination widget can be changed by using a configuration like below.
+
+.. code-block:: typoscript
+
+	plugin.tx_news {
+		view {
+			widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = {$plugin.tx_news.view.templateRootPath}
+		}
+	}
+
+
 Layouts, Templates & Partials
 -----------------------------
 
@@ -124,7 +138,7 @@ Sections are very similar to partials. The difference is that sections are defin
 
 
 
-Viewhelpers
+ViewHelpers
 ^^^^^^^^^^^
 
 Ever fluid viewhelper starts with  **<f:** . and you can always check
@@ -139,5 +153,5 @@ namespace declaration like
 
 	{namespace n=GeorgRinger\News\ViewHelpers}
 
-Then viewHelpers of EXT:news (which can be found in ```news/Classes/ViewHelpers```) can be used with the prefix  **n:** .
+Then viewHelpers of EXT:news (which can be found in ``news/Classes/ViewHelpers``) can be used with the prefix  **n:** .
 
