@@ -52,7 +52,7 @@ Property details
 	.. contents::
 		:local:
 		:depth: 1
-git
+
 
 .. _extensionManager-removeListActionFromFlexforms:
 
