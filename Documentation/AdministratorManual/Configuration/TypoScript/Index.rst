@@ -581,7 +581,8 @@ Properties
 	facebookLocale_                       string
 	disqusLocale_                         string
 	googlePlusLocale_                     string
-	interfaces_                           string
+	interfaces_                           array
+	mediaRenderer_                        array
 	opengraph_                            array
 	`detail\.media`_                      array
 	`detail\.errorHandling`_              string
@@ -692,6 +693,7 @@ displayDummyIfNoMedia
          The placeholder itself is defined with TypoScript ::
 
            plugin.tx_news.settings.list.media.dummyImage = typo3conf/ext/news/Resources/Public/Images/dummy-preview-image.png
+
    Default
          1
 
@@ -963,6 +965,31 @@ interfaces
            		video = GeorgRinger\News\MediaRenderer\Video\Fal
            	}
            }
+
+
+.. _tsMediaRenderer:
+
+mediaRenderer
+""""""""""
+
+.. container:: table-row
+
+   Property
+         mediaRenderer
+   Data type
+         array
+   Description
+          Configuration of the various renderers (see configuration above). Currently only the renderer of Youtube videos uses those.
+   Default
+         ::
+
+			mediaRenderer {
+				youtube {
+					# Add additional parameters to the URL used in the iframes.
+					additionalParams =
+				}
+			}
+
 
 .. _tsOpengraph:
 
