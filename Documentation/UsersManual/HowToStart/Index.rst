@@ -27,7 +27,7 @@ Create the records
 Before any news record can be shown in the frontend those need to be
 created.
 
-#. Therefore create a new sysfolder and switch to the list module. (Of
+#. Create a new sysfolder and switch to the list module. (Of
    course you can also use an existing sysfolder or normal page).
 
 #. **List view:** Use the icon in the topbar “Create new record” and search for “News
