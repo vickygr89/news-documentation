@@ -54,7 +54,10 @@ created.
 Add a plugin to a page
 ----------------------
 A plugin is used to render a defined selection of records in the frontend.
-Follow this steps to add a plugin to a page:
+Follow this steps to add a plugin respectively for detail- and list-view to a page:
+
+Detail page
+^^^^^^^^^^^
 
 #. Create a new page “Detail” which will be used to show the full news
    record. Insert the plugin “News system”. The 2 :sup:`nd` tab “Plugin”
@@ -68,6 +71,9 @@ Follow this steps to add a plugin to a page:
    #. Change the 1 :sup:`st` select box “What to display” to “Detail view”.
 
    #. Save the plugin.
+   
+List page
+^^^^^^^^^
 
 #. Create a new page “List” (or however you want to name it) and insert
    the plugin “News system” there again.
