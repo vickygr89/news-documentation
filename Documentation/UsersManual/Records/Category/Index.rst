@@ -11,7 +11,10 @@ Category
 --------
 Categories are not mandatory but make it easier to structure news records.
 
-EXT:news uses the **System Categories** since version *3.0.0*.
+.. hint::
+
+   EXT:news uses the **System Categories** since version *3.0.0*.
+
 
 Add a category
 ^^^^^^^^^^^^^^
