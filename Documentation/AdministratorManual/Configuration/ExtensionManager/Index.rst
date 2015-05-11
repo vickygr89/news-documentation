@@ -11,7 +11,7 @@ Extension Manager
 -----------------
 
 Some general settings can be configured in the Extension Manager.
-If you need to configure those, switch to the module "Extension Manager", select the extenison "**news**" and press on the configure-icon!
+If you need to configure those, switch to the module "Extension Manager", select the extension "**news**" and press on the configure-icon!
 
 .. todo: screenshot
 
@@ -129,6 +129,12 @@ If set and a news record is copied, the news record will be prepended with the s
 categoryRestriction
 """""""""""""""""""
 Define an additional constraint for the categories inside a news record. Possible options are:
+
+.. only:: html
+
+   .. contents::
+        :local:
+        :depth: 1
 
 None
 ~~~~

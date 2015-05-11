@@ -1,20 +1,45 @@
-
-
 3.2.0 - 2015/XX/XX
-------------------
+==================
 
-TBD
+.. only:: html
+
+   .. contents::
+:local:
+        :depth: 1
+
 
 Upgrade procedure
-=================
+-----------------
 
 The following changes might break your installation but all are easy to solve.
+
+.. only:: html
+
+   .. contents::
+:local:
+        :depth: 1
+
+Change of proxy-class generation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you used the feature of EXT:news to extend any class by providing a file called ``Resources/Private/extend-news.txt``,
+be aware that the implementation and registration changed! Basically all you need is to add the following code to your ``ext_localconf.php`` file:
+
+.. code-block:: php
+
+	<?php
+	defined('TYPO3_MODE') or die();
+
+	$GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['classes']['Domain/Model/News'][] = 'eventnews';
+
+Please take a look at the  :ref:`documentation <proxyClassGenerator>`.
+
 
 Usage of namespaces
 ^^^^^^^^^^^^^^^^^^^
 
 The extension uses now fully namespaces which meant touching every PHP class at least once!
-The used vendor name is **GeorgRinger**!
+The used vendor name is ``GeorgRinger``!
 
 Dropping the mm table for tt_content relations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -28,16 +53,23 @@ The usage of this table is now dropped which means that after updating, you need
 
 The Upgrade Wizard is called **EXT:news Migrate from tt_content mm relation**.
 
+Dropping t3blog importer
+^^^^^^^^^^^^^^^^^^^^^^^^
+The code to import records and categories of the extension *t3blog* has been moved to a separate extension. You can find that here: https://github.com/georgringer/t3ext-news_import_t3blog
+
 Important changes
-=================
+-----------------
 
 A lot of code changed in this version. The most important changes are:
 
 * A new index has been added to the database table ``tx_news_domain_model_news`` to improve the performance of translated records.
+* The documentation uses now a separate git repositories which is located on GitHub. This makes it easier for everyone to contribute a better documentation. The repository is located here: https://github.com/georgringer/news-documentation
 
 All Changes
-===========
+-----------
 
 This list has been created by using: ::
 
 	git log --since="2015/XX/XX" --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short
+
+

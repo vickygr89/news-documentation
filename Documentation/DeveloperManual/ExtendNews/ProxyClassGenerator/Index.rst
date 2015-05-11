@@ -5,7 +5,7 @@
 
 .. include:: ../../../Includes.txt
 
-.. _extendClasses:
+.. _proxyClassGenerator:
 
 ProxyClass generator
 ====================
