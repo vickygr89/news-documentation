@@ -47,6 +47,7 @@ The following files and classes have been renamed:
 
 - ``Hooks/T3libBefunc`` into ``Hooks/BackendUtility``
 - ``Hooks/Tcemain`` into ``Hooks/DataHandler``
+- ``Hooks/CmsLayout`` into ``Hooks/PageLayoutView``
 - ``Hooks/Tceforms`` into ``Hooks/FormEngine``
 
 The registration of the hook ``$GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['Hooks/T3libBefunc.php']['updateFlexforms']`` changed into ``$GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['Hooks/BackendUtility.php']['updateFlexforms']`` .
