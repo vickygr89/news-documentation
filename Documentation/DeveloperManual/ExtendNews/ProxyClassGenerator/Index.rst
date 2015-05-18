@@ -15,6 +15,11 @@ Follow this chapter to learn how to add new fields or actions.
 It is important to know how this concept is implemented. If a class should be extended, EXT:news will generate
 a new file containing the original class of the extension itself and all other classes which should extended it.
 
+Take a look at the following 2 working examples:
+
+- Add relation to a FE user: https://github.com/cyberhouse/t3ext-newsauthor
+- Add an image gallery to a news record: https://github.com/cyberhouse/t3ext-news_gallery
+
 .. attention:: This generator works only with the news version 3.2.0 or higher.
 
 .. warning:: The drawbacks are easy to identify:
