@@ -37,9 +37,21 @@ Please take a look at the  :ref:`documentation <proxyClassGenerator>`.
 
 Usage of namespaces
 ^^^^^^^^^^^^^^^^^^^
-
 The extension uses now fully namespaces which meant touching every PHP class at least once!
 The used vendor name is ``GeorgRinger``!
+
+Rename some hooks
+^^^^^^^^^^^^^^^^^
+
+The following files and classes have been renamed:
+
+- ``Hooks/T3libBefunc`` into ``Hooks/BackendUtility``
+- ``Hooks/Tcemain`` into ``Hooks/DataHandler``
+- ``Hooks/Tceforms`` into ``Hooks/FormEngine``
+
+The registration of the hook ``$GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['Hooks/T3libBefunc.php']['updateFlexforms']`` changed into ``$GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['Hooks/BackendUtility.php']['updateFlexforms']`` .
+
+If you use one of these files, change the name to the new version.
 
 Dropping the mm table for tt_content relations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
