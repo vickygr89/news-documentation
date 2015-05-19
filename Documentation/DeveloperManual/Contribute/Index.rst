@@ -25,7 +25,7 @@ Contribute documentation
 This documentation is the first place where people expect to find the needed information.
 Therefore it is improved all the time.
 
-To make it really easy for **everyone** to contribute to the documentation, it has been separated from the extension and
+To make it easy for **everyone** to contribute to the documentation, it has been separated from the extension and
 is maintained on github at https://github.com/georgringer/news-documentation!
 
 .. important::
@@ -42,9 +42,10 @@ reST
 """"
 
 The documentations of TYPO3 are based on reST. The syntax might be a bit strange in the beginning
-but it is really easy to understand and if you need help, just ask!.
 
 If you want to know more about reST, see http://wiki.typo3.org/Rest.
+
+A nice online editor at http://rst.ninjs.org/ can help you as well to get started.
 
 
 Contribute Code
