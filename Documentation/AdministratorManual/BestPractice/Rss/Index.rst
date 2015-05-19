@@ -43,7 +43,7 @@ A very simple way to generate the RSS feed is using plain TypoScript. All you ne
     	xhtml_cleaning = none
     	admPanel = 0
     	metaCharset = utf-8
-    	additionalHeaders = Content-Type:text/xml;charset=utf-8
+    	additionalHeaders = Content-Type:application/xml;charset=utf-8
     	disablePrefixComment = 1
     }
 
@@ -103,7 +103,7 @@ To create a RSS feed based on a plugin follow this steps:
              admPanel = 0
              metaCharset = utf-8
              # define charset
-             additionalHeaders = Content-Type:text/xml;charset=utf-8
+             additionalHeaders = Content-Type:application/xml;charset=utf-8
              disablePrefixComment = 1
       }
 
@@ -151,7 +151,7 @@ The TypoScript code looks like this.
     		# you need an english locale to get correct rfc values for <lastBuildDate>, ...
     		locale_all = en_EN
     		# define charset
-    		additionalHeaders = Content-Type:text/xml;charset=utf-8
+    		additionalHeaders = Content-Type:application/xml;charset=utf-8
     		disablePrefixComment = 1
     		baseURL = http://www.domain.tld/
     		absRefPrefix = http://www.domain.tld/

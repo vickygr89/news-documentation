@@ -153,7 +153,7 @@ The TypoScript code looks like this.
     		# you need an english locale to get correct rfc values for <lastBuildDate>, ...
     		locale_all = en_EN
     		# define charset
-    		additionalHeaders = Content-Type:text/xml;charset=utf-8
+    		additionalHeaders = Content-Type:text/calendar;charset=utf-8
     		disablePrefixComment = 1
     	}
 
