@@ -6,8 +6,8 @@ If you are using this extension, take some minutes and write me a postcard. That
 
 .. only:: html
 
-   .. contents::
-:local:
+.. contents::
+        :local:
         :depth: 1
 
 
@@ -17,8 +17,8 @@ The following changes might break your installation but all are easy to solve.
 
 .. only:: html
 
-   .. contents::
-:local:
+.. contents::
+        :local:
         :depth: 1
 
 Change of proxy-class generation
