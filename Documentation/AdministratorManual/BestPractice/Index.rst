@@ -24,5 +24,6 @@ Best practice
 	PredefineFields/Index
 	Rss/Index
 	ICalendar/Index
+	MigrateFromTtNews/Index
 
 
