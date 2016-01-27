@@ -28,7 +28,9 @@ Support of Twitter Bootstrap
 Additional templates have been added which are based on the popular framework **Twitter Bootstrap**.
 Those can be used by selecting the additional entry "*News Styles Twitter Bootstrap*" in the section "Include Static (from extensions)" in the template record.
 
-By changing the following constants you can use those templates as base and add your templates on top: ::
+By changing the following constants you can use those templates as base and add your templates on top:
+
+.. code-block:: typoscript
 
         plugin.tx_news {
             view.twb {
