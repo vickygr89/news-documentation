@@ -59,7 +59,7 @@ your own selections by adding those to
 You can then access the variable in your template with
 :code:`{settings.templateLayout}` and use it for a condition or whatever.
 
-Extend fleforms with custom fields
+Extend flexforms with custom fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 If you need additional fields in the flexform configuration, this can be done by using a hook in the core.
 
