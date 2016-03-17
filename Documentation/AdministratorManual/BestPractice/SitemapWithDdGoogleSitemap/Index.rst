@@ -22,7 +22,7 @@ Configuration
 ^^^^^^^^^^^^^
 
 After installing dd_googlesitemap you can create sitemaps for the news records by calling the URL
-``https://www.yourdomain.tld/index.php?eId=dd_googlesitemap&id=1&sitemap=txnews&singlePid=123&pidList=456``.
+``https://www.yourdomain.tld/index.php?eID=dd_googlesitemap&id=1&sitemap=txnews&singlePid=123&pidList=456``.
 
 The following parameters need to be configured properly:
 
