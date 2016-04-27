@@ -67,6 +67,7 @@ All ViewHelpers
    PaginateBodytextViewHelper
    TargetLinkViewHelper
    TitleTagViewHelper
+   SimplePrevNextViewHelper
 
    Be/ClickmenuViewHelper
    Be/MultiEditLinkViewHelper
